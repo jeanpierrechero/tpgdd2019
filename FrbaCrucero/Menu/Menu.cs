@@ -19,11 +19,19 @@ namespace FrbaCrucero.Menu
             InitializeComponent();
         }
 
+        private void btnAgregarRol(object sender, EventArgs e)
+        {
+            Hide();
+            var altaRol = new AbmRol.AltaRoles();
+            altaRol.Show();
+        }
+
         private void listarRoles(object sender, EventArgs e)
         {
             Hide();
-            var listarRoles = new AbmRol.ListarRoles();
-            listarRoles.Show();
+            var listRol = new AbmRol.ListarRoles();
+            listRol.Show();
         }
+
     }
 }

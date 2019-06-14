@@ -145,6 +145,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Exceptions\LoginException.cs" />
     <Compile Include="GD1C2019DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -265,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AbmRol\BajaRoles.resx">
       <DependentUpon>BajaRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\ListarRoles.resx">
+      <DependentUpon>ListarRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmRol\ModificacionRoles.resx">
       <DependentUpon>ModificacionRoles.cs</DependentUpon>

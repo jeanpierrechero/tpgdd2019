@@ -20,8 +20,8 @@ namespace FrbaCrucero
         private void usuario_cliente(object sender, EventArgs e)
         {
             Hide();
-            var login = new Usuario.Cliente();
-            login.Show();
+            var menu = new Menu.Menu();
+            menu.Show();
         }
 
         private void usuario_login(object sender, EventArgs e)
