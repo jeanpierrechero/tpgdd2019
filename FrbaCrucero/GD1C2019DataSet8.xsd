@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GD1C2019DataSet8" targetNamespace="http://tempuri.org/GD1C2019DataSet8.xsd" xmlns:mstns="http://tempuri.org/GD1C2019DataSet8.xsd" xmlns="http://tempuri.org/GD1C2019DataSet8.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GD1C2019ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GD1C2019ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FrbaCrucero.Properties.Settings.GlobalReference.Default.GD1C2019ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="listaCrucerosDisponiblesTableAdapter" GeneratorDataComponentClassName="listaCrucerosDisponiblesTableAdapter" Name="listaCrucerosDisponibles" UserDataComponentName="listaCrucerosDisponiblesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GD1C2019ConnectionString (Settings)" DbObjectName="GD1C2019.dbo.listaCrucerosDisponibles" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CODIGO, MODELO, FABRICANTE, ESTADO, FECHA_ALTA, FECHA_BAJA_TEMPORAL FROM dbo.listaCrucerosDisponibles</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="MODELO" DataSetColumn="MODELO" />
+              <Mapping SourceColumn="FABRICANTE" DataSetColumn="FABRICANTE" />
+              <Mapping SourceColumn="ESTADO" DataSetColumn="ESTADO" />
+              <Mapping SourceColumn="FECHA_ALTA" DataSetColumn="FECHA_ALTA" />
+              <Mapping SourceColumn="FECHA_BAJA_TEMPORAL" DataSetColumn="FECHA_BAJA_TEMPORAL" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GD1C2019DataSet8" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GD1C2019DataSet8" msprop:Generator_UserDSName="GD1C2019DataSet8">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="listaCrucerosDisponibles" msprop:Generator_TableClassName="listaCrucerosDisponiblesDataTable" msprop:Generator_TableVarName="tablelistaCrucerosDisponibles" msprop:Generator_TablePropName="listaCrucerosDisponibles" msprop:Generator_RowDeletingName="listaCrucerosDisponiblesRowDeleting" msprop:Generator_RowChangingName="listaCrucerosDisponiblesRowChanging" msprop:Generator_RowEvHandlerName="listaCrucerosDisponiblesRowChangeEventHandler" msprop:Generator_RowDeletedName="listaCrucerosDisponiblesRowDeleted" msprop:Generator_UserTableName="listaCrucerosDisponibles" msprop:Generator_RowChangedName="listaCrucerosDisponiblesRowChanged" msprop:Generator_RowEvArgName="listaCrucerosDisponiblesRowChangeEvent" msprop:Generator_RowClassName="listaCrucerosDisponiblesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODELO" msprop:Generator_ColumnVarNameInTable="columnMODELO" msprop:Generator_ColumnPropNameInRow="MODELO" msprop:Generator_ColumnPropNameInTable="MODELOColumn" msprop:Generator_UserColumnName="MODELO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FABRICANTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFABRICANTE" msprop:Generator_ColumnPropNameInRow="FABRICANTE" msprop:Generator_ColumnPropNameInTable="FABRICANTEColumn" msprop:Generator_UserColumnName="FABRICANTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTADO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnESTADO" msprop:Generator_ColumnPropNameInRow="ESTADO" msprop:Generator_ColumnPropNameInTable="ESTADOColumn" msprop:Generator_UserColumnName="ESTADO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA_ALTA" msprop:Generator_ColumnVarNameInTable="columnFECHA_ALTA" msprop:Generator_ColumnPropNameInRow="FECHA_ALTA" msprop:Generator_ColumnPropNameInTable="FECHA_ALTAColumn" msprop:Generator_UserColumnName="FECHA_ALTA" type="xs:dateTime" />
+              <xs:element name="FECHA_BAJA_TEMPORAL" msprop:Generator_ColumnVarNameInTable="columnFECHA_BAJA_TEMPORAL" msprop:Generator_ColumnPropNameInRow="FECHA_BAJA_TEMPORAL" msprop:Generator_ColumnPropNameInTable="FECHA_BAJA_TEMPORALColumn" msprop:Generator_UserColumnName="FECHA_BAJA_TEMPORAL" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:listaCrucerosDisponibles" />
+      <xs:field xpath="mstns:CODIGO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

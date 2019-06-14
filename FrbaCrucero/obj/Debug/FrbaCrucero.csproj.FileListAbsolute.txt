@@ -1,0 +1,38 @@
+\\VBOXSVR\FrbaBus_1°C_2019\src\FrbaCrucero\bin\Debug\FrbaCrucero.exe.config
+<<<<<<< HEAD
+C:\Users\usuario\Desktop\gdd\mavemapie\FrbaCrucero\bin\Debug\FrbaCrucero.exe.config
+C:\Users\usuario\Desktop\gdd\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\gdd\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRol.AltaRoles.resources
+C:\Users\usuario\Desktop\gdd\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRol.Form1.resources
+C:\Users\usuario\Desktop\gdd\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.Properties.Resources.resources
+C:\Users\usuario\Desktop\gdd\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.csproj.GenerateResource.Cache
+C:\Users\usuario\Desktop\gdd\mavemapie\FrbaCrucero\bin\Debug\FrbaCrucero.exe
+C:\Users\usuario\Desktop\gdd\mavemapie\FrbaCrucero\bin\Debug\FrbaCrucero.pdb
+C:\Users\usuario\Desktop\gdd\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.exe
+C:\Users\usuario\Desktop\gdd\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.pdb
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.Inicio.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.Menu.Menu.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.Usuario.Login.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmCrucero.AltaCrucero.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmCrucero.BajaCrucero.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmCrucero.Form1.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmPuerto.AltaPuerto.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmPuerto.BajaPuerto.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmPuerto.Form1.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmPuerto.ModificarPuertos.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRecorrido.AltaRecorrido.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRecorrido.BajaRecorrido.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRecorrido.Form1.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRecorrido.ModificacionRecorridos.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRol.AltaRoles.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRol.BajaRoles.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRol.ModificacionRoles.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.Usuario.Cliente.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\bin\Debug\FrbaCrucero.exe.config
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\bin\Debug\FrbaCrucero.exe
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\bin\Debug\FrbaCrucero.pdb
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.csprojResolveAssemblyReference.cache
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.Properties.Resources.resources
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.csproj.GenerateResource.Cache
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.exe
+C:\Users\Jean Pierre\Desktop\mavemapie\FrbaCrucero\obj\Debug\FrbaCrucero.pdb

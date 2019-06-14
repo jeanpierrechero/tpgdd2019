@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GD1C2019DataSet2" targetNamespace="http://tempuri.org/GD1C2019DataSet2.xsd" xmlns:mstns="http://tempuri.org/GD1C2019DataSet2.xsd" xmlns="http://tempuri.org/GD1C2019DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GD1C2019ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GD1C2019ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FrbaCrucero.Properties.Settings.GlobalReference.Default.GD1C2019ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lista_recorridosTableAdapter" GeneratorDataComponentClassName="lista_recorridosTableAdapter" Name="lista_recorridos" UserDataComponentName="lista_recorridosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GD1C2019ConnectionString (Settings)" DbObjectName="GD1C2019.dbo.lista_recorridos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CODIGO_RECORRIDO, PUERTO_ORIGEN, PUERTO_DESTINO, PRECIO_BASE, ESTADO FROM dbo.lista_recorridos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODIGO_RECORRIDO" DataSetColumn="CODIGO_RECORRIDO" />
+              <Mapping SourceColumn="PUERTO_ORIGEN" DataSetColumn="PUERTO_ORIGEN" />
+              <Mapping SourceColumn="PUERTO_DESTINO" DataSetColumn="PUERTO_DESTINO" />
+              <Mapping SourceColumn="PRECIO_BASE" DataSetColumn="PRECIO_BASE" />
+              <Mapping SourceColumn="ESTADO" DataSetColumn="ESTADO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GD1C2019DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GD1C2019DataSet2" msprop:Generator_UserDSName="GD1C2019DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="lista_recorridos" msprop:Generator_TableClassName="lista_recorridosDataTable" msprop:Generator_TableVarName="tablelista_recorridos" msprop:Generator_TablePropName="lista_recorridos" msprop:Generator_RowDeletingName="lista_recorridosRowDeleting" msprop:Generator_RowChangingName="lista_recorridosRowChanging" msprop:Generator_RowEvHandlerName="lista_recorridosRowChangeEventHandler" msprop:Generator_RowDeletedName="lista_recorridosRowDeleted" msprop:Generator_UserTableName="lista_recorridos" msprop:Generator_RowChangedName="lista_recorridosRowChanged" msprop:Generator_RowEvArgName="lista_recorridosRowChangeEvent" msprop:Generator_RowClassName="lista_recorridosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODIGO_RECORRIDO" msprop:Generator_ColumnVarNameInTable="columnCODIGO_RECORRIDO" msprop:Generator_ColumnPropNameInRow="CODIGO_RECORRIDO" msprop:Generator_ColumnPropNameInTable="CODIGO_RECORRIDOColumn" msprop:Generator_UserColumnName="CODIGO_RECORRIDO" type="xs:decimal" />
+              <xs:element name="PUERTO_ORIGEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPUERTO_ORIGEN" msprop:Generator_ColumnPropNameInRow="PUERTO_ORIGEN" msprop:Generator_ColumnPropNameInTable="PUERTO_ORIGENColumn" msprop:Generator_UserColumnName="PUERTO_ORIGEN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PUERTO_DESTINO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPUERTO_DESTINO" msprop:Generator_ColumnPropNameInRow="PUERTO_DESTINO" msprop:Generator_ColumnPropNameInTable="PUERTO_DESTINOColumn" msprop:Generator_UserColumnName="PUERTO_DESTINO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRECIO_BASE" msprop:Generator_ColumnVarNameInTable="columnPRECIO_BASE" msprop:Generator_ColumnPropNameInRow="PRECIO_BASE" msprop:Generator_ColumnPropNameInTable="PRECIO_BASEColumn" msprop:Generator_UserColumnName="PRECIO_BASE" type="xs:decimal" />
+              <xs:element name="ESTADO" msprop:Generator_ColumnVarNameInTable="columnESTADO" msprop:Generator_ColumnPropNameInRow="ESTADO" msprop:Generator_ColumnPropNameInTable="ESTADOColumn" msprop:Generator_UserColumnName="ESTADO" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:lista_recorridos" />
+      <xs:field xpath="mstns:CODIGO_RECORRIDO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
