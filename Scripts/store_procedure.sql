@@ -1,12 +1,60 @@
---version 1_20190601
 use [GD1C2019]
 go
 
-alter PROCEDURE mavema_pie.sp_migracion
+ALTER PROCEDURE mavema_pie.sp_migracion
 	@vari int
 AS
 	BEGIN TRY
 		BEGIN TRANSACTION
+
+			
+			--INSERT FORMA DE PAGO
+			INSERT INTO mavema_pie.forma_pago(form_nombre)
+			VALUES ('Efectivo')
+
+			--INSERT FUNCIONALIDADES
+			INSERT INTO mavema_pie.funcionalidad(func_nombre)
+			VALUES ('ALTA_USUARIO'),
+				   ('MODIFICAR_USUARIO'),
+				   ('ELIMINAR_USUARIO'),
+				   ('ALTA_ROL'),
+				   ('MODIFICAR_ROL'),
+				   ('ELIMINAR_ROL'),
+				   ('ALTA_PUERTO'),
+				   ('MODIFICAR_PUERTO'),
+				   ('ELIMINAR_PUERTO'),
+				   ('ALTA_RECORRIDO'),
+				   ('MODIFICAR_RECORRIDO'),
+				   ('ELIMINAR_RECORRIDO'),
+				   ('ALTA_CRUCERO'),
+				   ('MODIFICAR_CRUCERO'),
+				   ('ELIMINAR_CRUCERO'),
+				   ('GENERAR_VIAJE'),
+				   ('GENERAR_PASAJE'),
+				   ('RESERVAR_PASAJE')
+
+			--INSERT ROLE
+			INSERT INTO mavema_pie.role (role_nombre,role_activo)
+			VALUES	('ADMIN',1),
+					('CLIENTE', 1)
+
+			--INSERT ROLE FUNCIONALIDAD
+			INSERT INTO mavema_pie.role_funcionalidad(role_codigo,func_codigo)
+			(SELECT (SELECT top 1 role_codigo FROM mavema_pie.role WHERE role_nombre = 'ADMIN'), func_codigo FROM mavema_pie.funcionalidad)
+
+			--INSERT USUARIO
+			INSERT INTO mavema_pie.usuario (usua_docu_tipo,usua_docu_numero,usua_nombre,usua_apellido,usua_direccion,usua_telefono,usua_mail,
+											usua_fecha_nac,usua_fecha_alta)
+			VALUES ('DNI',12345678,'admin','admin','',1111111111,'admin@admin.com','1990-01-01','2018-01-01')
+
+			--INSERT lOGIN
+			INSERT INTO mavema_pie.login(logi_usuario,logi_username,logi_password,logi_intentos_fallidos,logi_activo)
+			VALUES ((SELECT top 1 usua_codigo FROM mavema_pie.usuario WHERE usua_nombre = 'admin'),'admin', HASHBYTES('SHA2_256', 'w23e'),0,1)
+
+			--INSERT USUARIO ROL
+			INSERT INTO mavema_pie.usuario_role(usua_codigo,role_codigo)
+			(SELECT usua_codigo, (SELECT top 1 role_codigo FROM mavema_pie.role WHERE role_nombre = 'ADMIN') 
+			FROM mavema_pie.usuario WHERE usua_nombre = 'admin')
 
 			--INSERT TABLE FABRICANTE
 			INSERT INTO mavema_pie.fabricante (fabr_nombre)
@@ -33,8 +81,8 @@ AS
 			FROM gd_esquema.Maestra M join mavema_pie.tipo_servicio on M.CABINA_TIPO = tipo_nombre)
 
 			--TRAMO
-			INSERT INTO mavema_pie.tramo (tram_precio_base, tram_puerto_desde, tram_puerto_hasta)
-			(SELECT DISTINCT RECORRIDO_PRECIO_BASE ,p1.puer_codigo,p2.puer_codigo
+			INSERT INTO mavema_pie.tramo (tram_precio_base, tram_puerto_desde, tram_puerto_hasta, tram_duracion)
+			(SELECT DISTINCT RECORRIDO_PRECIO_BASE ,p1.puer_codigo,p2.puer_codigo,DATEDIFF(HOUR, FECHA_SALIDA, FECHA_LLEGADA_ESTIMADA)
 			FROM gd_esquema.Maestra join mavema_pie.puerto p1 on PUERTO_DESDE = p1.puer_nombre join mavema_pie.puerto p2 on PUERTO_HASTA=p2.puer_nombre
 			where p1.puer_codigo > p2.puer_codigo)
 
@@ -44,10 +92,10 @@ AS
 
 			-- reco tramo
 			INSERT INTO mavema_pie.tramo_recorrido(reco_codigo, tram_codigo)
-			(select distinct RECORRIDO_CODIGO, T1.tram_codigo
+			(SELECT DISTINCT RECORRIDO_CODIGO, T1.tram_codigo
 				from gd_esquema.Maestra 
 				join mavema_pie.puerto p1 on p1.puer_nombre = PUERTO_DESDE 
-				join mavema_pie.puerto p2 on p2.puer_nombre=PUERTO_HASTA 
+				join mavema_pie.puerto p2 on p2.puer_nombre = PUERTO_HASTA 
 				join mavema_pie.tramo t1 on t1.tram_puerto_desde=p1.puer_codigo and t1.tram_puerto_hasta=p2.puer_codigo)
 			
 			--Viaje
@@ -87,4 +135,4 @@ GO
 
 
 
---exec mavema_pie.sp_ejemplo1 @vari = 12
+exec mavema_pie.sp_migracion @vari = 12

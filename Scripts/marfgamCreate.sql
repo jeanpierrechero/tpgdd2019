@@ -3,7 +3,7 @@
 use [GD1C2019]
 go
 
---CREATE SCHEMA [MAVEMA_PIE]
+--CREATE SCHEMA [mavema_pie]
 --GO
 
 -- TABLAS DE USUARIO
@@ -103,6 +103,7 @@ CREATE TABLE mavema_pie.tramo (
 	tram_precio_base DECIMAL(18,2) NOT NULL,
 	tram_puerto_desde INT NOT NULL,
 	tram_puerto_hasta INT NOT NULL,
+	tram_duracion DECIMAL(2) NOT NULL,
 );
 CREATE TABLE mavema_pie.tramo_recorrido(
 	reco_codigo DECIMAL(18) NOT NULL,
