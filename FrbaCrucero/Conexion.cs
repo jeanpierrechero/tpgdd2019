@@ -36,22 +36,8 @@ namespace FrbaCrucero
 
         }
 
-         public void llenar_combobox_funcionalidades(ComboBox cb){
-         try{
-                cmd = new SqlCommand("select func_nombre from mavema_pie.funcionalidad",cn);
-             dr = cmd.ExecuteReader();
-             while(dr.Read())
-         {
-            cb.Items.Add(dr["func_nombre"].ToString());
-         }
-             dr.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se lleno el comboBox " + ex.ToString());
-            }
-            
-         }
+       
+      
 
          public string validateLogin(string username, string pass) {
 

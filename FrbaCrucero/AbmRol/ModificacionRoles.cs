@@ -19,6 +19,8 @@ namespace FrbaCrucero.AbmRol
 
         private void ModificacionRoles_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'listaRolesTotal.listaRoles' Puede moverla o quitarla según sea necesario.
+            this.listaRolesTableAdapter1.Fill(this.listaRolesTotal.listaRoles);
             // TODO: esta línea de código carga datos en la tabla 'gD1C2019DataSet3.listaRoles' Puede moverla o quitarla según sea necesario.
             this.listaRolesTableAdapter.Fill(this.gD1C2019DataSet3.listaRoles);
 

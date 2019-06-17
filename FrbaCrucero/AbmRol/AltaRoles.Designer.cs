@@ -28,15 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.comboBoxSeleccionados = new System.Windows.Forms.ComboBox();
             this.boton_guardar = new System.Windows.Forms.Button();
             this.boton_limpiar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.nombre_box = new System.Windows.Forms.TextBox();
             this.comboBox_funcionalidades = new System.Windows.Forms.ComboBox();
+            this.listaFuncionalidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gD1C2019DataSet12 = new FrbaCrucero.GD1C2019DataSet12();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_agregar_funcionalidad = new System.Windows.Forms.Button();
+            this.button_borrar_funcionalidad = new System.Windows.Forms.Button();
+            this.listaFuncionalidadesTableAdapter = new FrbaCrucero.GD1C2019DataSet12TableAdapters.listaFuncionalidadesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.listaFuncionalidadesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet12)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +59,7 @@
             // 
             // boton_guardar
             // 
-            this.boton_guardar.Location = new System.Drawing.Point(288, 223);
+            this.boton_guardar.Location = new System.Drawing.Point(323, 223);
             this.boton_guardar.Name = "boton_guardar";
             this.boton_guardar.Size = new System.Drawing.Size(75, 23);
             this.boton_guardar.TabIndex = 17;
@@ -67,6 +75,7 @@
             this.boton_limpiar.TabIndex = 16;
             this.boton_limpiar.Text = "Limpiar";
             this.boton_limpiar.UseVisualStyleBackColor = true;
+            this.boton_limpiar.Click += new System.EventHandler(this.boton_limpiar_Click);
             // 
             // label5
             // 
@@ -88,11 +97,25 @@
             // 
             // comboBox_funcionalidades
             // 
+            this.comboBox_funcionalidades.DataSource = this.listaFuncionalidadesBindingSource;
+            this.comboBox_funcionalidades.DisplayMember = "func_nombre";
             this.comboBox_funcionalidades.FormattingEnabled = true;
             this.comboBox_funcionalidades.Location = new System.Drawing.Point(142, 78);
             this.comboBox_funcionalidades.Name = "comboBox_funcionalidades";
             this.comboBox_funcionalidades.Size = new System.Drawing.Size(121, 21);
             this.comboBox_funcionalidades.TabIndex = 13;
+            this.comboBox_funcionalidades.ValueMember = "func_nombre";
+            this.comboBox_funcionalidades.SelectedIndexChanged += new System.EventHandler(this.comboBox_funcionalidades_SelectedIndexChanged);
+            // 
+            // listaFuncionalidadesBindingSource
+            // 
+            this.listaFuncionalidadesBindingSource.DataMember = "listaFuncionalidades";
+            this.listaFuncionalidadesBindingSource.DataSource = this.gD1C2019DataSet12;
+            // 
+            // gD1C2019DataSet12
+            // 
+            this.gD1C2019DataSet12.DataSetName = "GD1C2019DataSet12";
+            this.gD1C2019DataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -114,6 +137,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_agregar_funcionalidad);
+            this.groupBox1.Controls.Add(this.button_borrar_funcionalidad);
             this.groupBox1.Controls.Add(this.comboBoxSeleccionados);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label5);
@@ -122,22 +147,49 @@
             this.groupBox1.Controls.Add(this.nombre_box);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(351, 172);
+            this.groupBox1.Size = new System.Drawing.Size(386, 172);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Alta Rol";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button_agregar_funcionalidad
+            // 
+            this.button_agregar_funcionalidad.Location = new System.Drawing.Point(297, 76);
+            this.button_agregar_funcionalidad.Name = "button_agregar_funcionalidad";
+            this.button_agregar_funcionalidad.Size = new System.Drawing.Size(75, 23);
+            this.button_agregar_funcionalidad.TabIndex = 20;
+            this.button_agregar_funcionalidad.Text = "agregar";
+            this.button_agregar_funcionalidad.UseVisualStyleBackColor = true;
+            this.button_agregar_funcionalidad.Click += new System.EventHandler(this.button_agregar_funcionalidad_Click);
+            // 
+            // button_borrar_funcionalidad
+            // 
+            this.button_borrar_funcionalidad.Location = new System.Drawing.Point(297, 117);
+            this.button_borrar_funcionalidad.Name = "button_borrar_funcionalidad";
+            this.button_borrar_funcionalidad.Size = new System.Drawing.Size(75, 23);
+            this.button_borrar_funcionalidad.TabIndex = 19;
+            this.button_borrar_funcionalidad.Text = "Borrar";
+            this.button_borrar_funcionalidad.UseVisualStyleBackColor = true;
+            this.button_borrar_funcionalidad.Click += new System.EventHandler(this.button_borrar_funcionalidad_Click);
+            // 
+            // listaFuncionalidadesTableAdapter
+            // 
+            this.listaFuncionalidadesTableAdapter.ClearBeforeFill = true;
             // 
             // AltaRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 261);
+            this.ClientSize = new System.Drawing.Size(405, 258);
             this.Controls.Add(this.boton_guardar);
             this.Controls.Add(this.boton_limpiar);
             this.Controls.Add(this.groupBox1);
             this.Name = "AltaRoles";
             this.Text = "AltaRoles";
             this.Load += new System.EventHandler(this.AltaRoles_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.listaFuncionalidadesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet12)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -146,7 +198,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBoxSeleccionados;
         private System.Windows.Forms.Button boton_guardar;
         private System.Windows.Forms.Button boton_limpiar;
         private System.Windows.Forms.Label label5;
@@ -155,5 +206,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button_agregar_funcionalidad;
+        private System.Windows.Forms.Button button_borrar_funcionalidad;
+        private GD1C2019DataSet12 gD1C2019DataSet12;
+        private System.Windows.Forms.BindingSource listaFuncionalidadesBindingSource;
+        private GD1C2019DataSet12TableAdapters.listaFuncionalidadesTableAdapter listaFuncionalidadesTableAdapter;
+        public System.Windows.Forms.ComboBox comboBoxSeleccionados;
     }
 }

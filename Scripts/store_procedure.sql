@@ -1,7 +1,7 @@
 use [GD1C2019]
 go
 
-ALTER PROCEDURE mavema_pie.sp_migracion
+create PROCEDURE mavema_pie.sp_migracion
 	@vari int
 AS
 	BEGIN TRY

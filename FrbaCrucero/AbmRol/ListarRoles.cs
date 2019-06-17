@@ -43,5 +43,24 @@ namespace FrbaCrucero.AbmRol
             }
 
         }
+
+        private void ListarRoles_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'gD1C2019DataSet12.listaFuncionalidades' Puede moverla o quitarla según sea necesario.
+            this.listaFuncionalidadesTableAdapter.Fill(this.gD1C2019DataSet12.listaFuncionalidades);
+            // TODO: esta línea de código carga datos en la tabla 'listaRolesActivos.listaRolesDisponibles' Puede moverla o quitarla según sea necesario.
+            this.listaRolesDisponiblesTableAdapter.Fill(this.listaRolesActivos.listaRolesDisponibles);
+            // TODO: esta línea de código carga datos en la tabla 'listaRolesTotal.listaRoles' Puede moverla o quitarla según sea necesario.
+            this.listaRolesTableAdapter.Fill(this.listaRolesTotal.listaRoles);
+            // TODO: esta línea de código carga datos en la tabla 'gD1C2019DataSet11.listaRoles' Puede moverla o quitarla según sea necesario.
+            this.listaRolesTableAdapter1.Fill(this.gD1C2019DataSet11.listaRoles);
+            
+
+        }
+
+        private void comboBox_busqueda_funcionalidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

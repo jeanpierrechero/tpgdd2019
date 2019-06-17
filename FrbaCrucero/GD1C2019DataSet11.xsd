@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="GD1C2019DataSet" targetNamespace="http://tempuri.org/GD1C2019DataSet.xsd" xmlns:mstns="http://tempuri.org/GD1C2019DataSet.xsd" xmlns="http://tempuri.org/GD1C2019DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="GD1C2019DataSet11" targetNamespace="http://tempuri.org/GD1C2019DataSet11.xsd" xmlns:mstns="http://tempuri.org/GD1C2019DataSet11.xsd" xmlns="http://tempuri.org/GD1C2019DataSet11.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -7,12 +7,12 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GD1C2019ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GD1C2019ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FrbaCrucero.Properties.Settings.GlobalReference.Default.GD1C2019ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="listaRolesDisponiblesTableAdapter" GeneratorDataComponentClassName="listaRolesDisponiblesTableAdapter" Name="listaRolesDisponibles" UserDataComponentName="listaRolesDisponiblesTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="listaRolesTableAdapter" GeneratorDataComponentClassName="listaRolesTableAdapter" Name="listaRoles" UserDataComponentName="listaRolesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="GD1C2019ConnectionString (Settings)" DbObjectName="GD1C2019.dbo.listaRolesDisponibles" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="GD1C2019ConnectionString (Settings)" DbObjectName="GD1C2019.dbo.listaRoles" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT NOMBRE, FUNCIONALIDAD, ESTADO FROM dbo.listaRolesDisponibles</CommandText>
+                    <CommandText>SELECT NOMBRE, FUNCIONALIDAD, ESTADO FROM dbo.listaRoles</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -30,10 +30,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="GD1C2019DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GD1C2019DataSet" msprop:Generator_UserDSName="GD1C2019DataSet">
+  <xs:element name="GD1C2019DataSet11" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GD1C2019DataSet11" msprop:Generator_UserDSName="GD1C2019DataSet11">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="listaRolesDisponibles" msprop:Generator_TableClassName="listaRolesDisponiblesDataTable" msprop:Generator_TableVarName="tablelistaRolesDisponibles" msprop:Generator_TablePropName="listaRolesDisponibles" msprop:Generator_RowDeletingName="listaRolesDisponiblesRowDeleting" msprop:Generator_RowChangingName="listaRolesDisponiblesRowChanging" msprop:Generator_RowEvHandlerName="listaRolesDisponiblesRowChangeEventHandler" msprop:Generator_RowDeletedName="listaRolesDisponiblesRowDeleted" msprop:Generator_UserTableName="listaRolesDisponibles" msprop:Generator_RowChangedName="listaRolesDisponiblesRowChanged" msprop:Generator_RowEvArgName="listaRolesDisponiblesRowChangeEvent" msprop:Generator_RowClassName="listaRolesDisponiblesRow">
+        <xs:element name="listaRoles" msprop:Generator_TableClassName="listaRolesDataTable" msprop:Generator_TableVarName="tablelistaRoles" msprop:Generator_TablePropName="listaRoles" msprop:Generator_RowDeletingName="listaRolesRowDeleting" msprop:Generator_RowChangingName="listaRolesRowChanging" msprop:Generator_RowEvHandlerName="listaRolesRowChangeEventHandler" msprop:Generator_RowDeletedName="listaRolesRowDeleted" msprop:Generator_UserTableName="listaRoles" msprop:Generator_RowChangedName="listaRolesRowChanged" msprop:Generator_RowEvArgName="listaRolesRowChangeEvent" msprop:Generator_RowClassName="listaRolesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE">

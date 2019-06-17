@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="GD1C2019DataSet" targetNamespace="http://tempuri.org/GD1C2019DataSet.xsd" xmlns:mstns="http://tempuri.org/GD1C2019DataSet.xsd" xmlns="http://tempuri.org/GD1C2019DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="listaRolesActivos" targetNamespace="http://tempuri.org/listaRolesActivos.xsd" xmlns:mstns="http://tempuri.org/listaRolesActivos.xsd" xmlns="http://tempuri.org/listaRolesActivos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -30,7 +30,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="GD1C2019DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GD1C2019DataSet" msprop:Generator_UserDSName="GD1C2019DataSet">
+  <xs:element name="listaRolesActivos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="listaRolesActivos" msprop:Generator_UserDSName="listaRolesActivos">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="listaRolesDisponibles" msprop:Generator_TableClassName="listaRolesDisponiblesDataTable" msprop:Generator_TableVarName="tablelistaRolesDisponibles" msprop:Generator_TablePropName="listaRolesDisponibles" msprop:Generator_RowDeletingName="listaRolesDisponiblesRowDeleting" msprop:Generator_RowChangingName="listaRolesDisponiblesRowChanging" msprop:Generator_RowEvHandlerName="listaRolesDisponiblesRowChangeEventHandler" msprop:Generator_RowDeletedName="listaRolesDisponiblesRowDeleted" msprop:Generator_UserTableName="listaRolesDisponibles" msprop:Generator_RowChangedName="listaRolesDisponiblesRowChanged" msprop:Generator_RowEvArgName="listaRolesDisponiblesRowChangeEvent" msprop:Generator_RowClassName="listaRolesDisponiblesRow">

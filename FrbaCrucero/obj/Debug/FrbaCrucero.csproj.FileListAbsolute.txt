@@ -62,3 +62,29 @@ C:\Users\Jean Pierre\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.Usuario
 C:\Users\Jean Pierre\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.Properties.Resources.resources
 C:\Users\Jean Pierre\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.csproj.GenerateResource.Cache
 C:\Users\Jean Pierre\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRol.ListarRoles.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\bin\Debug\FrbaCrucero.exe.config
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.exe
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.pdb
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmCrucero.AltaCrucero.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmCrucero.BajaCrucero.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmCrucero.Form1.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmPuerto.AltaPuerto.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmPuerto.BajaPuerto.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmPuerto.Form1.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmPuerto.ModificarPuertos.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRecorrido.AltaRecorrido.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRecorrido.BajaRecorrido.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRecorrido.Form1.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRecorrido.ModificacionRecorridos.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRol.AltaRoles.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRol.BajaRoles.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRol.ListarRoles.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.AbmRol.ModificacionRoles.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.Inicio.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.Menu.Menu.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.Usuario.Login.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.Properties.Resources.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.csproj.GenerateResource.Cache
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\bin\Debug\FrbaCrucero.exe
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\bin\Debug\FrbaCrucero.pdb

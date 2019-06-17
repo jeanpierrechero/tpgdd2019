@@ -20,17 +20,17 @@ namespace FrbaCrucero {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("GD1C2019DataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("GD1C2019DataSet11")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class GD1C2019DataSet : global::System.Data.DataSet {
+    public partial class GD1C2019DataSet11 : global::System.Data.DataSet {
         
-        private listaRolesDisponiblesDataTable tablelistaRolesDisponibles;
+        private listaRolesDataTable tablelistaRoles;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public GD1C2019DataSet() {
+        public GD1C2019DataSet11() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace FrbaCrucero {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected GD1C2019DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected GD1C2019DataSet11(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace FrbaCrucero {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["listaRolesDisponibles"] != null)) {
-                    base.Tables.Add(new listaRolesDisponiblesDataTable(ds.Tables["listaRolesDisponibles"]));
+                if ((ds.Tables["listaRoles"] != null)) {
+                    base.Tables.Add(new listaRolesDataTable(ds.Tables["listaRoles"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace FrbaCrucero {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public listaRolesDisponiblesDataTable listaRolesDisponibles {
+        public listaRolesDataTable listaRoles {
             get {
-                return this.tablelistaRolesDisponibles;
+                return this.tablelistaRoles;
             }
         }
         
@@ -127,7 +127,7 @@ namespace FrbaCrucero {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            GD1C2019DataSet cln = ((GD1C2019DataSet)(base.Clone()));
+            GD1C2019DataSet11 cln = ((GD1C2019DataSet11)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace FrbaCrucero {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["listaRolesDisponibles"] != null)) {
-                    base.Tables.Add(new listaRolesDisponiblesDataTable(ds.Tables["listaRolesDisponibles"]));
+                if ((ds.Tables["listaRoles"] != null)) {
+                    base.Tables.Add(new listaRolesDataTable(ds.Tables["listaRoles"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace FrbaCrucero {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablelistaRolesDisponibles = ((listaRolesDisponiblesDataTable)(base.Tables["listaRolesDisponibles"]));
+            this.tablelistaRoles = ((listaRolesDataTable)(base.Tables["listaRoles"]));
             if ((initTable == true)) {
-                if ((this.tablelistaRolesDisponibles != null)) {
-                    this.tablelistaRolesDisponibles.InitVars();
+                if ((this.tablelistaRoles != null)) {
+                    this.tablelistaRoles.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace FrbaCrucero {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "GD1C2019DataSet";
+            this.DataSetName = "GD1C2019DataSet11";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/GD1C2019DataSet.xsd";
+            this.Namespace = "http://tempuri.org/GD1C2019DataSet11.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablelistaRolesDisponibles = new listaRolesDisponiblesDataTable();
-            base.Tables.Add(this.tablelistaRolesDisponibles);
+            this.tablelistaRoles = new listaRolesDataTable();
+            base.Tables.Add(this.tablelistaRoles);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializelistaRolesDisponibles() {
+        private bool ShouldSerializelistaRoles() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace FrbaCrucero {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            GD1C2019DataSet ds = new GD1C2019DataSet();
+            GD1C2019DataSet11 ds = new GD1C2019DataSet11();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace FrbaCrucero {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void listaRolesDisponiblesRowChangeEventHandler(object sender, listaRolesDisponiblesRowChangeEvent e);
+        public delegate void listaRolesRowChangeEventHandler(object sender, listaRolesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class listaRolesDisponiblesDataTable : global::System.Data.TypedTableBase<listaRolesDisponiblesRow> {
+        public partial class listaRolesDataTable : global::System.Data.TypedTableBase<listaRolesRow> {
             
             private global::System.Data.DataColumn columnNOMBRE;
             
@@ -287,8 +287,8 @@ namespace FrbaCrucero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public listaRolesDisponiblesDataTable() {
-                this.TableName = "listaRolesDisponibles";
+            public listaRolesDataTable() {
+                this.TableName = "listaRoles";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +296,7 @@ namespace FrbaCrucero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal listaRolesDisponiblesDataTable(global::System.Data.DataTable table) {
+            internal listaRolesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,7 +313,7 @@ namespace FrbaCrucero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected listaRolesDisponiblesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected listaRolesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -353,47 +353,47 @@ namespace FrbaCrucero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public listaRolesDisponiblesRow this[int index] {
+            public listaRolesRow this[int index] {
                 get {
-                    return ((listaRolesDisponiblesRow)(this.Rows[index]));
+                    return ((listaRolesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event listaRolesDisponiblesRowChangeEventHandler listaRolesDisponiblesRowChanging;
+            public event listaRolesRowChangeEventHandler listaRolesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event listaRolesDisponiblesRowChangeEventHandler listaRolesDisponiblesRowChanged;
+            public event listaRolesRowChangeEventHandler listaRolesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event listaRolesDisponiblesRowChangeEventHandler listaRolesDisponiblesRowDeleting;
+            public event listaRolesRowChangeEventHandler listaRolesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event listaRolesDisponiblesRowChangeEventHandler listaRolesDisponiblesRowDeleted;
+            public event listaRolesRowChangeEventHandler listaRolesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddlistaRolesDisponiblesRow(listaRolesDisponiblesRow row) {
+            public void AddlistaRolesRow(listaRolesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public listaRolesDisponiblesRow AddlistaRolesDisponiblesRow(string NOMBRE, string FUNCIONALIDAD, bool ESTADO) {
-                listaRolesDisponiblesRow rowlistaRolesDisponiblesRow = ((listaRolesDisponiblesRow)(this.NewRow()));
+            public listaRolesRow AddlistaRolesRow(string NOMBRE, string FUNCIONALIDAD, bool ESTADO) {
+                listaRolesRow rowlistaRolesRow = ((listaRolesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NOMBRE,
                         FUNCIONALIDAD,
                         ESTADO};
-                rowlistaRolesDisponiblesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowlistaRolesDisponiblesRow);
-                return rowlistaRolesDisponiblesRow;
+                rowlistaRolesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowlistaRolesRow);
+                return rowlistaRolesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                listaRolesDisponiblesDataTable cln = ((listaRolesDisponiblesDataTable)(base.Clone()));
+                listaRolesDataTable cln = ((listaRolesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -401,7 +401,7 @@ namespace FrbaCrucero {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new listaRolesDisponiblesDataTable();
+                return new listaRolesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -430,28 +430,28 @@ namespace FrbaCrucero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public listaRolesDisponiblesRow NewlistaRolesDisponiblesRow() {
-                return ((listaRolesDisponiblesRow)(this.NewRow()));
+            public listaRolesRow NewlistaRolesRow() {
+                return ((listaRolesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new listaRolesDisponiblesRow(builder);
+                return new listaRolesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(listaRolesDisponiblesRow);
+                return typeof(listaRolesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.listaRolesDisponiblesRowChanged != null)) {
-                    this.listaRolesDisponiblesRowChanged(this, new listaRolesDisponiblesRowChangeEvent(((listaRolesDisponiblesRow)(e.Row)), e.Action));
+                if ((this.listaRolesRowChanged != null)) {
+                    this.listaRolesRowChanged(this, new listaRolesRowChangeEvent(((listaRolesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -459,8 +459,8 @@ namespace FrbaCrucero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.listaRolesDisponiblesRowChanging != null)) {
-                    this.listaRolesDisponiblesRowChanging(this, new listaRolesDisponiblesRowChangeEvent(((listaRolesDisponiblesRow)(e.Row)), e.Action));
+                if ((this.listaRolesRowChanging != null)) {
+                    this.listaRolesRowChanging(this, new listaRolesRowChangeEvent(((listaRolesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -468,8 +468,8 @@ namespace FrbaCrucero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.listaRolesDisponiblesRowDeleted != null)) {
-                    this.listaRolesDisponiblesRowDeleted(this, new listaRolesDisponiblesRowChangeEvent(((listaRolesDisponiblesRow)(e.Row)), e.Action));
+                if ((this.listaRolesRowDeleted != null)) {
+                    this.listaRolesRowDeleted(this, new listaRolesRowChangeEvent(((listaRolesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -477,14 +477,14 @@ namespace FrbaCrucero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.listaRolesDisponiblesRowDeleting != null)) {
-                    this.listaRolesDisponiblesRowDeleting(this, new listaRolesDisponiblesRowChangeEvent(((listaRolesDisponiblesRow)(e.Row)), e.Action));
+                if ((this.listaRolesRowDeleting != null)) {
+                    this.listaRolesRowDeleting(this, new listaRolesRowChangeEvent(((listaRolesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovelistaRolesDisponiblesRow(listaRolesDisponiblesRow row) {
+            public void RemovelistaRolesRow(listaRolesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -493,7 +493,7 @@ namespace FrbaCrucero {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GD1C2019DataSet ds = new GD1C2019DataSet();
+                GD1C2019DataSet11 ds = new GD1C2019DataSet11();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -511,7 +511,7 @@ namespace FrbaCrucero {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "listaRolesDisponiblesDataTable";
+                attribute2.FixedValue = "listaRolesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -555,25 +555,25 @@ namespace FrbaCrucero {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class listaRolesDisponiblesRow : global::System.Data.DataRow {
+        public partial class listaRolesRow : global::System.Data.DataRow {
             
-            private listaRolesDisponiblesDataTable tablelistaRolesDisponibles;
+            private listaRolesDataTable tablelistaRoles;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal listaRolesDisponiblesRow(global::System.Data.DataRowBuilder rb) : 
+            internal listaRolesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablelistaRolesDisponibles = ((listaRolesDisponiblesDataTable)(this.Table));
+                this.tablelistaRoles = ((listaRolesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string NOMBRE {
                 get {
-                    return ((string)(this[this.tablelistaRolesDisponibles.NOMBREColumn]));
+                    return ((string)(this[this.tablelistaRoles.NOMBREColumn]));
                 }
                 set {
-                    this[this.tablelistaRolesDisponibles.NOMBREColumn] = value;
+                    this[this.tablelistaRoles.NOMBREColumn] = value;
                 }
             }
             
@@ -581,10 +581,10 @@ namespace FrbaCrucero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string FUNCIONALIDAD {
                 get {
-                    return ((string)(this[this.tablelistaRolesDisponibles.FUNCIONALIDADColumn]));
+                    return ((string)(this[this.tablelistaRoles.FUNCIONALIDADColumn]));
                 }
                 set {
-                    this[this.tablelistaRolesDisponibles.FUNCIONALIDADColumn] = value;
+                    this[this.tablelistaRoles.FUNCIONALIDADColumn] = value;
                 }
             }
             
@@ -592,10 +592,10 @@ namespace FrbaCrucero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool ESTADO {
                 get {
-                    return ((bool)(this[this.tablelistaRolesDisponibles.ESTADOColumn]));
+                    return ((bool)(this[this.tablelistaRoles.ESTADOColumn]));
                 }
                 set {
-                    this[this.tablelistaRolesDisponibles.ESTADOColumn] = value;
+                    this[this.tablelistaRoles.ESTADOColumn] = value;
                 }
             }
         }
@@ -604,22 +604,22 @@ namespace FrbaCrucero {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class listaRolesDisponiblesRowChangeEvent : global::System.EventArgs {
+        public class listaRolesRowChangeEvent : global::System.EventArgs {
             
-            private listaRolesDisponiblesRow eventRow;
+            private listaRolesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public listaRolesDisponiblesRowChangeEvent(listaRolesDisponiblesRow row, global::System.Data.DataRowAction action) {
+            public listaRolesRowChangeEvent(listaRolesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public listaRolesDisponiblesRow Row {
+            public listaRolesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -635,7 +635,7 @@ namespace FrbaCrucero {
         }
     }
 }
-namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
+namespace FrbaCrucero.GD1C2019DataSet11TableAdapters {
     
     
     /// <summary>
@@ -647,7 +647,7 @@ namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class listaRolesDisponiblesTableAdapter : global::System.ComponentModel.Component {
+    public partial class listaRolesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -661,7 +661,7 @@ namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public listaRolesDisponiblesTableAdapter() {
+        public listaRolesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -758,7 +758,7 @@ namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "listaRolesDisponibles";
+            tableMapping.DataSetTable = "listaRoles";
             tableMapping.ColumnMappings.Add("NOMBRE", "NOMBRE");
             tableMapping.ColumnMappings.Add("FUNCIONALIDAD", "FUNCIONALIDAD");
             tableMapping.ColumnMappings.Add("ESTADO", "ESTADO");
@@ -778,7 +778,7 @@ namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT NOMBRE, FUNCIONALIDAD, ESTADO FROM dbo.listaRolesDisponibles";
+            this._commandCollection[0].CommandText = "SELECT NOMBRE, FUNCIONALIDAD, ESTADO FROM dbo.listaRoles";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -786,7 +786,7 @@ namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GD1C2019DataSet.listaRolesDisponiblesDataTable dataTable) {
+        public virtual int Fill(GD1C2019DataSet11.listaRolesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -799,9 +799,9 @@ namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GD1C2019DataSet.listaRolesDisponiblesDataTable GetData() {
+        public virtual GD1C2019DataSet11.listaRolesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GD1C2019DataSet.listaRolesDisponiblesDataTable dataTable = new GD1C2019DataSet.listaRolesDisponiblesDataTable();
+            GD1C2019DataSet11.listaRolesDataTable dataTable = new GD1C2019DataSet11.listaRolesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -875,7 +875,7 @@ namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(GD1C2019DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(GD1C2019DataSet11 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -885,7 +885,7 @@ namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(GD1C2019DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(GD1C2019DataSet11 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -895,7 +895,7 @@ namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(GD1C2019DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(GD1C2019DataSet11 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -929,7 +929,7 @@ namespace FrbaCrucero.GD1C2019DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(GD1C2019DataSet dataSet) {
+        public virtual int UpdateAll(GD1C2019DataSet11 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
