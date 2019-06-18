@@ -16,6 +16,7 @@ namespace FrbaCrucero.AbmRol
 
         SqlConnection c = new SqlConnection(FrbaCrucero.Properties.Settings.Default.GD1C2019ConnectionString);
         int indice;
+        int codigo_rol;
         public AltaRoles()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace FrbaCrucero.AbmRol
             SqlCommand comando = new SqlCommand("dar_de_alta_role",c);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@nombre_rol",nombre_box.Text);
+            codigo_rol = Convert.ToInt32(comando.Parameters["@rol_codigo"].Value);
             c.Close();
             c.Open();
 
@@ -47,7 +49,7 @@ namespace FrbaCrucero.AbmRol
                 c.Open();
                 SqlCommand ingreso = new SqlCommand("asignar_funcionalidad_rol");
                 ingreso.CommandType = CommandType.StoredProcedure;
-                ingreso.Parameters.AddWithValue("@rol", nombre_box.Text);
+                ingreso.Parameters.AddWithValue("@rol", codigo_rol);
                 ingreso.Parameters.AddWithValue("@funcionalidad_nombre",comboBoxSeleccionados.Items[i].ToString());
 
             }

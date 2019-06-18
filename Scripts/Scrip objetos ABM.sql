@@ -53,8 +53,10 @@ end
 /*
 --este store solo ingresa el nombre y asiga codigo del rol entrante
 alter procedure dar_de_alta_role
-@nombre_rol nvarchar(50)
+@nombre_rol nvarchar(50),
+@rol_codigo int output
 as begin
+set @rol_codigo = dbo.crear_nuevo_id_rol(@nombre_rol)
 insert into mavema_pie.role(role_codigo,role_nombre,role_activo )
 values (   dbo.crear_nuevo_id_rol(@nombre_rol)    ,@nombre_rol,1);
 
