@@ -136,7 +136,7 @@ CREATE TABLE mavema_pie.fabricante (
 	--fabr_nombre_corto CHAR(10) NOT NULL,
 );
 CREATE TABLE mavema_pie.cabina (
-	cabi_codigo INT NOT NULL IDENTITY,
+	cabi_codigo DECIMAL(6) NOT NULL IDENTITY,
 	cabi_crucero NVARCHAR(50) NOT NULL,
 	cabi_tipo INT NOT NULL,
 	cabi_numero DECIMAL(18) NOT NULL,
@@ -221,3 +221,4 @@ ALTER TABLE mavema_pie.pasaje ADD CONSTRAINT factura_pasaje_fk FOREIGN KEY (pasa
 ALTER TABLE mavema_pie.pasaje ADD CONSTRAINT reserva_pasaje_fk FOREIGN KEY (pasa_reserva) REFERENCES mavema_pie.reserva(rese_codigo);
 ALTER TABLE mavema_pie.pasaje ADD CONSTRAINT pasajero_pasaje_fk FOREIGN KEY (pasa_pasajero) REFERENCES mavema_pie.pasajero(jero_codigo);
 ALTER TABLE mavema_pie.pasaje ADD CONSTRAINT viaje_pasaje_fk FOREIGN KEY (pasa_viaje) REFERENCES mavema_pie.viaje(viaj_codigo);
+ALTER TABLE mavema_pie.pasaje ADD CONSTRAINT cabina_pasaje_fk FOREIGN KEY (pasa_cabina) REFERENCES mavema_pie.cabina(cabi_codigo);

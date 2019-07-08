@@ -107,6 +107,10 @@ AS
 			INSERT INTO mavema_pie.usuario(usua_docu_tipo, usua_docu_numero, usua_nombre, usua_apellido, usua_direccion, usua_telefono, usua_mail, usua_fecha_nac, usua_fecha_alta)
 			(select distinct 'DNI', CLI_DNI,CLI_NOMBRE,CLI_APELLIDO,CLI_DIRECCION,CLI_TELEFONO,CLI_MAIL,CLI_FECHA_NAC,'1900-01-01'
 			from gd_esquema.Maestra)
+
+			--Pasajero
+			INSERT INTO mavema_pie.pasajero(jero_nacimiento,jero_docu_numero,jero_nombre,jero_apellido,jero_docu_tipo)
+			(SELECT DISTINCT CLI_FECHA_NAC,CLI_DNI,CLI_NOMBRE,CLI_APELLIDO,'DNI' FROM gd_esquema.Maestra)
 			
 			--Reserva
 			SET IDENTITY_INSERT mavema_pie.reserva ON;  
@@ -117,6 +121,21 @@ AS
 			DBCC CHECKIDENT ('mavema_pie.reserva', RESEED, 54999999);
 			SET IDENTITY_INSERT mavema_pie.reserva OFF;  
 			
+			--Pasaje
+			INSERT INTO mavema_pie.pasaje(pasa_codigo,pasa_factura,pasa_pasajero,pasa_reserva,pasa_viaje,pasa_cabina,pasa_fecha_cancelacion,pasa_motivo_cancelacion)
+			(SELECT DISTINCT ma.PASAJE_CODIGO,NULL, u.jero_codigo,NULL,v.viaj_codigo,c.cabi_codigo,NULL,NULL FROM gd_esquema.Maestra ma
+			JOIN mavema_pie.pasajero u ON u.jero_docu_numero = ma.CLI_DNI AND
+										 u.jero_nombre = ma.CLI_NOMBRE AND
+										 u.jero_apellido = ma.CLI_APELLIDO
+			JOIN mavema_pie.viaje v ON v.viaj_recorrido = ma.RECORRIDO_CODIGO AND
+									   v.viaj_crucero = ma.CRUCERO_IDENTIFICADOR AND
+									   v.viaj_fecha_inicio = ma.FECHA_SALIDA AND
+									   v.viaj_fecha_fin = ma.FECHA_LLEGADA
+			JOIN mavema_pie.cabina c ON c.cabi_crucero = ma.CRUCERO_IDENTIFICADOR AND
+										c.cabi_numero = ma.CABINA_NRO AND
+										c.cabi_piso = ma.CABINA_PISO
+			WHERE ma.PASAJE_CODIGO IS NOT NULL)
+			ORDER BY ma.PASAJE_CODIGO
 			
 
 		COMMIT TRANSACTION

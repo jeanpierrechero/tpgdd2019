@@ -3,6 +3,8 @@
 use [GD1C2019]
 go
 
+delete from mavema_pie.pasaje;
+delete from mavema_pie.viaje;
 delete from mavema_pie.tramo_recorrido;
 delete from mavema_pie.recorrido;
 delete from mavema_pie.tramo;
@@ -11,8 +13,10 @@ delete from mavema_pie.crucero;
 delete from mavema_pie.puerto;
 delete from mavema_pie.tipo_servicio;
 delete from mavema_pie.fabricante;
-delete from mavema_pie.viaje;
+delete from mavema_pie.cabina;
 
+
+ALTER TABLE mavema_pie.pasaje DROP CONSTRAINT cabina_pasaje_fk;
 ALTER TABLE mavema_pie.pasaje DROP CONSTRAINT factura_pasaje_fk;
 ALTER TABLE mavema_pie.pasaje DROP CONSTRAINT reserva_pasaje_fk;
 ALTER TABLE mavema_pie.pasaje DROP CONSTRAINT pasajero_pasaje_fk;
