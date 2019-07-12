@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace FrbaCrucero.GeneracionViaje
 {
-    public partial class Form1 : Form
+    public partial class AltaViaje : Menu.Menu
     {
-        public Form1()
+        public AltaViaje()
         {
             InitializeComponent();
         }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            /*codigo*/
+
+            Hide();
+            var listado = new GeneracionViaje.ListadoViaje();
+            listado.Show();
+        }
+
     }
 }

@@ -27,7 +27,7 @@ namespace FrbaCrucero.Usuario
             string pass = txt_password.Text;
 
             string result = con.validateLogin(txt_usuario.Text, txt_password.Text);
-
+            
             if (result == "0")
             {
                 MessageBox.Show("Usuario o Password incorrecto.");

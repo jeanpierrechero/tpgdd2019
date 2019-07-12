@@ -1,7 +1,7 @@
 use [GD1C2019]
 go
 
-create PROCEDURE mavema_pie.sp_migracion
+alter PROCEDURE mavema_pie.sp_migracion
 	@vari int
 AS
 	BEGIN TRY
@@ -49,7 +49,7 @@ AS
 
 			--INSERT lOGIN
 			INSERT INTO mavema_pie.login(logi_usuario,logi_username,logi_password,logi_intentos_fallidos,logi_activo)
-			VALUES ((SELECT top 1 usua_codigo FROM mavema_pie.usuario WHERE usua_nombre = 'admin'),'admin', HASHBYTES('SHA2_256', 'w23e'),0,1)
+			VALUES ((SELECT top 1 usua_codigo FROM mavema_pie.usuario WHERE usua_nombre = 'admin'),'admin', HASHBYTES('SHA2_256', CONVERT(nvarchar(50), 'w23e')),0,1)
 
 			--INSERT USUARIO ROL
 			INSERT INTO mavema_pie.usuario_role(usua_codigo,role_codigo)

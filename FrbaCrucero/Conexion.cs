@@ -8,6 +8,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using FrbaCrucero.Exceptions;
+using System.Configuration;
 
 
 namespace FrbaCrucero
@@ -23,7 +24,7 @@ namespace FrbaCrucero
             {
                 if (cn == null)
                 {
-                    cn = new SqlConnection("Data Source=localhost;Initial Catalog=GD1C2019;User ID=sa;Password=1234");
+                    cn = new SqlConnection(ConfigurationManager.ConnectionStrings["FrbaCrucero.Properties.Settings.GD1C2019ConnectionString"].ConnectionString);
                 }
 
                 cn.Open();
@@ -41,11 +42,12 @@ namespace FrbaCrucero
 
          public string validateLogin(string username, string pass) {
 
-             var result = "0";
+             
              try
              {
                  cmd = new SqlCommand("select mavema_pie.func_login('" + username + "','" + pass + "')", cn);
-                 result =  cmd.ExecuteScalar().ToString();
+                 var result =  cmd.ExecuteScalar().ToString();
+                 return result;
                  
              }
              catch (Exception ex)
@@ -53,7 +55,7 @@ namespace FrbaCrucero
                  throw ex;
              }
 
-             return result;
+             
          }
     }
 }
