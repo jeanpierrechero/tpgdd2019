@@ -24,7 +24,7 @@ namespace FrbaCrucero.AbmRol
         {
             try
             {
-                
+                /*
                 DataTable table = new DataTable();
                 table.Columns.Add(new DataColumn("Nombree"));
                 table.Columns.Add(new DataColumn("Seleccionar"));
@@ -34,7 +34,7 @@ namespace FrbaCrucero.AbmRol
                 row[1] = "botones de acciones";
                 table.Rows.Add(row);
 
-                tabla_roles.DataSource = table;
+                tabla_roles.DataSource = table;*/
                 
             }
             catch (Exception ex)
