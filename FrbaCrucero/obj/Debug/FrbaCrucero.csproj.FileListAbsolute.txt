@@ -88,3 +88,6 @@ C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.Properties.
 C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.csproj.GenerateResource.Cache
 C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\bin\Debug\FrbaCrucero.exe
 C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\bin\Debug\FrbaCrucero.pdb
+C:\Users\giane_\Desktop\tpgdd2019\FrbaCrucero\bin\Debug\FrbaCrucero.exe.config
+C:\Users\giane_\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.exe
+C:\Users\giane_\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.pdb
