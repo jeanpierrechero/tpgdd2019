@@ -38,24 +38,26 @@
             this.fUNCIONALIDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eSTADODataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Seleccion = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.listaRolesDisponiblesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.listaRolesActivos = new FrbaCrucero.listaRolesActivos();
             this.listaRolesDisponiblesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gD1C2019DataSet1 = new FrbaCrucero.GD1C2019DataSet();
             this.listaRolesDisponiblesTableAdapter = new FrbaCrucero.GD1C2019DataSetTableAdapters.listaRolesDisponiblesTableAdapter();
-            this.listaRolesActivos = new FrbaCrucero.listaRolesActivos();
             this.listaRolesDisponiblesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.listaRolesDisponiblesTableAdapter1 = new FrbaCrucero.listaRolesActivosTableAdapters.listaRolesDisponiblesTableAdapter();
-            this.listaRolesDisponiblesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.boton_limpiar = new System.Windows.Forms.Button();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaRolesDisponiblesBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaRolesActivos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaRolesDisponiblesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaRolesActivos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaRolesDisponiblesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaRolesDisponiblesBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox
             // 
+            this.groupBox.Controls.Add(this.boton_limpiar);
             this.groupBox.Controls.Add(this.button_buscar);
             this.groupBox.Controls.Add(this.textBox_nombre);
             this.groupBox.Controls.Add(this.label2);
@@ -69,12 +71,13 @@
             // 
             // button_buscar
             // 
-            this.button_buscar.Location = new System.Drawing.Point(201, 22);
+            this.button_buscar.Location = new System.Drawing.Point(193, 22);
             this.button_buscar.Name = "button_buscar";
             this.button_buscar.Size = new System.Drawing.Size(75, 23);
             this.button_buscar.TabIndex = 2;
             this.button_buscar.Text = "Buscar";
             this.button_buscar.UseVisualStyleBackColor = true;
+            this.button_buscar.Click += new System.EventHandler(this.button_buscar_Click);
             // 
             // textBox_nombre
             // 
@@ -82,6 +85,7 @@
             this.textBox_nombre.Name = "textBox_nombre";
             this.textBox_nombre.Size = new System.Drawing.Size(100, 20);
             this.textBox_nombre.TabIndex = 1;
+            this.textBox_nombre.TextChanged += new System.EventHandler(this.textBox_nombre_TextChanged);
             // 
             // label2
             // 
@@ -107,6 +111,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(438, 260);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // nOMBREDataGridViewTextBoxColumn
             // 
@@ -135,6 +140,16 @@
             this.Seleccion.Name = "Seleccion";
             this.Seleccion.Text = "Borrar";
             // 
+            // listaRolesDisponiblesBindingSource2
+            // 
+            this.listaRolesDisponiblesBindingSource2.DataMember = "listaRolesDisponibles";
+            this.listaRolesDisponiblesBindingSource2.DataSource = this.listaRolesActivos;
+            // 
+            // listaRolesActivos
+            // 
+            this.listaRolesActivos.DataSetName = "listaRolesActivos";
+            this.listaRolesActivos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // listaRolesDisponiblesBindingSource
             // 
             this.listaRolesDisponiblesBindingSource.DataMember = "listaRolesDisponibles";
@@ -149,11 +164,6 @@
             // 
             this.listaRolesDisponiblesTableAdapter.ClearBeforeFill = true;
             // 
-            // listaRolesActivos
-            // 
-            this.listaRolesActivos.DataSetName = "listaRolesActivos";
-            this.listaRolesActivos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // listaRolesDisponiblesBindingSource1
             // 
             this.listaRolesDisponiblesBindingSource1.DataMember = "listaRolesDisponibles";
@@ -163,10 +173,15 @@
             // 
             this.listaRolesDisponiblesTableAdapter1.ClearBeforeFill = true;
             // 
-            // listaRolesDisponiblesBindingSource2
+            // boton_limpiar
             // 
-            this.listaRolesDisponiblesBindingSource2.DataMember = "listaRolesDisponibles";
-            this.listaRolesDisponiblesBindingSource2.DataSource = this.listaRolesActivos;
+            this.boton_limpiar.Location = new System.Drawing.Point(357, 41);
+            this.boton_limpiar.Name = "boton_limpiar";
+            this.boton_limpiar.Size = new System.Drawing.Size(75, 23);
+            this.boton_limpiar.TabIndex = 3;
+            this.boton_limpiar.Text = "Limpiar";
+            this.boton_limpiar.UseVisualStyleBackColor = true;
+            this.boton_limpiar.Click += new System.EventHandler(this.boton_limpiar_Click);
             // 
             // BajaRoles
             // 
@@ -179,11 +194,11 @@
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaRolesDisponiblesBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaRolesActivos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaRolesDisponiblesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaRolesActivos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaRolesDisponiblesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaRolesDisponiblesBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,5 +235,6 @@
         private System.Windows.Forms.BindingSource listaRolesDisponiblesBindingSource1;
         private listaRolesActivosTableAdapters.listaRolesDisponiblesTableAdapter listaRolesDisponiblesTableAdapter1;
         private System.Windows.Forms.BindingSource listaRolesDisponiblesBindingSource2;
+        private System.Windows.Forms.Button boton_limpiar;
     }
 }

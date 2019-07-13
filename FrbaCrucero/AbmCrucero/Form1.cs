@@ -16,5 +16,20 @@ namespace FrbaCrucero.AbmCrucero
         {
             InitializeComponent();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_entrar_alta_crucero_Click(object sender, EventArgs e)
+        {
+            new AltaCrucero().Show();
+        }
+
+        private void button_entrar_baja_cruceros_Click(object sender, EventArgs e)
+        {
+            new BajaCrucero().Show();
+        }
     }
 }

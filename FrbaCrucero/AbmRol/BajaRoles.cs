@@ -51,5 +51,25 @@ namespace FrbaCrucero.AbmRol
         {
 
         }
+
+        private void textBox_nombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_buscar_Click(object sender, EventArgs e)
+        {
+            (dataGridView2.DataSource as DataTable).DefaultView.RowFilter = string.Format("NOMBRE LIKE '{0}%'", textBox_nombre.Text);
+        }
+
+        private void boton_limpiar_Click(object sender, EventArgs e)
+        {
+            textBox_nombre.Clear();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="listaRolesTotalesConCodigo" targetNamespace="http://tempuri.org/listaRolesTotalesConCodigo.xsd" xmlns:mstns="http://tempuri.org/listaRolesTotalesConCodigo.xsd" xmlns="http://tempuri.org/listaRolesTotalesConCodigo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GD1C2019ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GD1C2019ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FrbaCrucero.Properties.Settings.GlobalReference.Default.GD1C2019ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="listaRolesTableAdapter" GeneratorDataComponentClassName="listaRolesTableAdapter" Name="listaRoles" UserDataComponentName="listaRolesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GD1C2019ConnectionString (Settings)" DbObjectName="GD1C2019.dbo.listaRoles" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CODIGO, NOMBRE, FUNCIONALIDAD, ESTADO FROM dbo.listaRoles</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="NOMBRE" DataSetColumn="NOMBRE" />
+              <Mapping SourceColumn="FUNCIONALIDAD" DataSetColumn="FUNCIONALIDAD" />
+              <Mapping SourceColumn="ESTADO" DataSetColumn="ESTADO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="listaRolesTotalesConCodigo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="listaRolesTotalesConCodigo" msprop:Generator_UserDSName="listaRolesTotalesConCodigo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="listaRoles" msprop:Generator_TableClassName="listaRolesDataTable" msprop:Generator_TableVarName="tablelistaRoles" msprop:Generator_TablePropName="listaRoles" msprop:Generator_RowDeletingName="listaRolesRowDeleting" msprop:Generator_RowChangingName="listaRolesRowChanging" msprop:Generator_RowEvHandlerName="listaRolesRowChangeEventHandler" msprop:Generator_RowDeletedName="listaRolesRowDeleted" msprop:Generator_UserTableName="listaRoles" msprop:Generator_RowChangedName="listaRolesRowChanged" msprop:Generator_RowEvArgName="listaRolesRowChangeEvent" msprop:Generator_RowClassName="listaRolesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FUNCIONALIDAD" msprop:Generator_ColumnVarNameInTable="columnFUNCIONALIDAD" msprop:Generator_ColumnPropNameInRow="FUNCIONALIDAD" msprop:Generator_ColumnPropNameInTable="FUNCIONALIDADColumn" msprop:Generator_UserColumnName="FUNCIONALIDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTADO" msprop:Generator_ColumnVarNameInTable="columnESTADO" msprop:Generator_ColumnPropNameInRow="ESTADO" msprop:Generator_ColumnPropNameInTable="ESTADOColumn" msprop:Generator_UserColumnName="ESTADO" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:listaRoles" />
+      <xs:field xpath="mstns:CODIGO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

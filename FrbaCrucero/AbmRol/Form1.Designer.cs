@@ -33,10 +33,10 @@
             this.boton_modif_rol = new System.Windows.Forms.Button();
             this.boton_alta_rol = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             this.boton_volver_roles.TabIndex = 9;
             this.boton_volver_roles.Text = "Volver";
             this.boton_volver_roles.UseVisualStyleBackColor = true;
+            this.boton_volver_roles.Click += new System.EventHandler(this.boton_volver_roles_Click);
             // 
             // boton_baja_rol
             // 
@@ -59,6 +60,7 @@
             this.boton_baja_rol.TabIndex = 8;
             this.boton_baja_rol.Text = "Entrar";
             this.boton_baja_rol.UseVisualStyleBackColor = true;
+            this.boton_baja_rol.Click += new System.EventHandler(this.boton_baja_rol_Click);
             // 
             // boton_modif_rol
             // 
@@ -69,6 +71,7 @@
             this.boton_modif_rol.TabIndex = 7;
             this.boton_modif_rol.Text = "Entrar";
             this.boton_modif_rol.UseVisualStyleBackColor = true;
+            this.boton_modif_rol.Click += new System.EventHandler(this.boton_modif_rol_Click);
             // 
             // boton_alta_rol
             // 
@@ -96,23 +99,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestion de Roles";
             // 
-            // button1
+            // label3
             // 
-            this.button1.Location = new System.Drawing.Point(231, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Crear un Rol";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Eliminar un Rol";
             // 
             // label2
             // 
@@ -123,14 +117,24 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Modificar un Rol";
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Eliminar un Rol";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Crear un Rol";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(231, 226);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
