@@ -51,7 +51,7 @@ namespace FrbaCrucero.AbmRol
                 ingreso.CommandType = CommandType.StoredProcedure;
                 ingreso.Parameters.AddWithValue("@rol", codigo_rol);
                 ingreso.Parameters.AddWithValue("@funcionalidad_nombre",comboBoxSeleccionados.Items[i].ToString());
-
+                c.Close();
             }
 
             

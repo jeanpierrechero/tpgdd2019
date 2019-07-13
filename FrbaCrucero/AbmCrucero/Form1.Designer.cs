@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button_entrar_alta_crucero = new System.Windows.Forms.Button();
-            this.button_entrar_modificacion_cruceros = new System.Windows.Forms.Button();
-            this.button_entrar_baja_cruceros = new System.Windows.Forms.Button();
-            this.button_salir = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_entrar_baja_cruceros = new System.Windows.Forms.Button();
+            this.button_entrar_modificacion_cruceros = new System.Windows.Forms.Button();
+            this.button_entrar_alta_crucero = new System.Windows.Forms.Button();
+            this.button_salir = new System.Windows.Forms.Button();
             this.button_volver = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,51 +54,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestion De Cruceros";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button_entrar_alta_crucero
+            // label3
             // 
-            this.button_entrar_alta_crucero.Location = new System.Drawing.Point(124, 31);
-            this.button_entrar_alta_crucero.Name = "button_entrar_alta_crucero";
-            this.button_entrar_alta_crucero.Size = new System.Drawing.Size(75, 23);
-            this.button_entrar_alta_crucero.TabIndex = 0;
-            this.button_entrar_alta_crucero.Text = "Entrar";
-            this.button_entrar_alta_crucero.UseVisualStyleBackColor = true;
-            // 
-            // button_entrar_modificacion_cruceros
-            // 
-            this.button_entrar_modificacion_cruceros.Location = new System.Drawing.Point(124, 72);
-            this.button_entrar_modificacion_cruceros.Name = "button_entrar_modificacion_cruceros";
-            this.button_entrar_modificacion_cruceros.Size = new System.Drawing.Size(75, 23);
-            this.button_entrar_modificacion_cruceros.TabIndex = 1;
-            this.button_entrar_modificacion_cruceros.Text = "Entrar";
-            this.button_entrar_modificacion_cruceros.UseVisualStyleBackColor = true;
-            // 
-            // button_entrar_baja_cruceros
-            // 
-            this.button_entrar_baja_cruceros.Location = new System.Drawing.Point(124, 114);
-            this.button_entrar_baja_cruceros.Name = "button_entrar_baja_cruceros";
-            this.button_entrar_baja_cruceros.Size = new System.Drawing.Size(75, 23);
-            this.button_entrar_baja_cruceros.TabIndex = 2;
-            this.button_entrar_baja_cruceros.Text = "Entrar";
-            this.button_entrar_baja_cruceros.UseVisualStyleBackColor = true;
-            // 
-            // button_salir
-            // 
-            this.button_salir.Location = new System.Drawing.Point(260, 226);
-            this.button_salir.Name = "button_salir";
-            this.button_salir.Size = new System.Drawing.Size(75, 23);
-            this.button_salir.TabIndex = 1;
-            this.button_salir.Text = "Salir";
-            this.button_salir.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nuevo Crucero";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Eliminar Crucero";
             // 
             // label2
             // 
@@ -109,14 +74,52 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Modificar Crucero";
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Eliminar Crucero";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nuevo Crucero";
+            // 
+            // button_entrar_baja_cruceros
+            // 
+            this.button_entrar_baja_cruceros.Location = new System.Drawing.Point(124, 114);
+            this.button_entrar_baja_cruceros.Name = "button_entrar_baja_cruceros";
+            this.button_entrar_baja_cruceros.Size = new System.Drawing.Size(75, 23);
+            this.button_entrar_baja_cruceros.TabIndex = 2;
+            this.button_entrar_baja_cruceros.Text = "Entrar";
+            this.button_entrar_baja_cruceros.UseVisualStyleBackColor = true;
+            this.button_entrar_baja_cruceros.Click += new System.EventHandler(this.button_entrar_baja_cruceros_Click);
+            // 
+            // button_entrar_modificacion_cruceros
+            // 
+            this.button_entrar_modificacion_cruceros.Location = new System.Drawing.Point(124, 72);
+            this.button_entrar_modificacion_cruceros.Name = "button_entrar_modificacion_cruceros";
+            this.button_entrar_modificacion_cruceros.Size = new System.Drawing.Size(75, 23);
+            this.button_entrar_modificacion_cruceros.TabIndex = 1;
+            this.button_entrar_modificacion_cruceros.Text = "Entrar";
+            this.button_entrar_modificacion_cruceros.UseVisualStyleBackColor = true;
+            // 
+            // button_entrar_alta_crucero
+            // 
+            this.button_entrar_alta_crucero.Location = new System.Drawing.Point(124, 31);
+            this.button_entrar_alta_crucero.Name = "button_entrar_alta_crucero";
+            this.button_entrar_alta_crucero.Size = new System.Drawing.Size(75, 23);
+            this.button_entrar_alta_crucero.TabIndex = 0;
+            this.button_entrar_alta_crucero.Text = "Entrar";
+            this.button_entrar_alta_crucero.UseVisualStyleBackColor = true;
+            this.button_entrar_alta_crucero.Click += new System.EventHandler(this.button_entrar_alta_crucero_Click);
+            // 
+            // button_salir
+            // 
+            this.button_salir.Location = new System.Drawing.Point(260, 226);
+            this.button_salir.Name = "button_salir";
+            this.button_salir.Size = new System.Drawing.Size(75, 23);
+            this.button_salir.TabIndex = 1;
+            this.button_salir.Text = "Salir";
+            this.button_salir.UseVisualStyleBackColor = true;
             // 
             // button_volver
             // 
