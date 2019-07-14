@@ -82,8 +82,10 @@ AS
 			--TRAMO
 			INSERT INTO mavema_pie.tramo (tram_precio_base, tram_puerto_desde, tram_puerto_hasta, tram_duracion)
 			(SELECT DISTINCT RECORRIDO_PRECIO_BASE ,p1.puer_codigo,p2.puer_codigo,DATEDIFF(HOUR, FECHA_SALIDA, FECHA_LLEGADA_ESTIMADA)
-			FROM gd_esquema.Maestra join mavema_pie.puerto p1 on PUERTO_DESDE = p1.puer_nombre join mavema_pie.puerto p2 on PUERTO_HASTA=p2.puer_nombre
-			where p1.puer_codigo > p2.puer_codigo)
+			FROM gd_esquema.Maestra 
+			left join mavema_pie.puerto p1 on PUERTO_DESDE = p1.puer_nombre 
+			left join mavema_pie.puerto p2 on PUERTO_HASTA=p2.puer_nombre
+			)
 
 			--RECORRIDO
 			INSERT INTO mavema_pie.recorrido (reco_codigo,reco_activo)
