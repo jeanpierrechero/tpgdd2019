@@ -57,5 +57,10 @@ namespace FrbaCrucero
 
              
          }
+
+         public SqlConnection getConeccion()
+         {
+             return cn;
+         }
     }
 }

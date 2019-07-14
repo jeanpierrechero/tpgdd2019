@@ -47,5 +47,17 @@ namespace FrbaCrucero.Menu
             altaViaje.Show();
         }
 
+        private void estadisticaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listadoEstadísticoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var listadoEstadistico = new ListadoEstadistico.Seleccion();
+            listadoEstadistico.Show();
+        }
+
     }
 }

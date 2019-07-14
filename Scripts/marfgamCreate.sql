@@ -1,5 +1,3 @@
---marfgam
-
 use [GD1C2019]
 go
 

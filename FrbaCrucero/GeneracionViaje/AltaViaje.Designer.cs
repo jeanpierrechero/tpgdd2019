@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 98);
+            this.label1.Location = new System.Drawing.Point(39, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             this.fecha_inicio.CustomFormat = "dd-MM-yyyy h:m:s";
             this.fecha_inicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fecha_inicio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.fecha_inicio.Location = new System.Drawing.Point(126, 98);
+            this.fecha_inicio.Location = new System.Drawing.Point(126, 105);
             this.fecha_inicio.Name = "fecha_inicio";
             this.fecha_inicio.Size = new System.Drawing.Size(147, 20);
             this.fecha_inicio.TabIndex = 1;
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 133);
+            this.label2.Location = new System.Drawing.Point(39, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             this.fecha_fin.CustomFormat = "dd-MM-yyyy h:m:s";
             this.fecha_fin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha_fin.Location = new System.Drawing.Point(126, 133);
+            this.fecha_fin.Location = new System.Drawing.Point(126, 140);
             this.fecha_fin.Name = "fecha_fin";
             this.fecha_fin.Size = new System.Drawing.Size(147, 20);
             this.fecha_fin.TabIndex = 3;
@@ -80,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 29);
+            this.label3.Location = new System.Drawing.Point(39, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 4;
@@ -89,7 +89,7 @@
             // combo_crucero
             // 
             this.combo_crucero.FormattingEnabled = true;
-            this.combo_crucero.Location = new System.Drawing.Point(126, 26);
+            this.combo_crucero.Location = new System.Drawing.Point(126, 33);
             this.combo_crucero.Name = "combo_crucero";
             this.combo_crucero.Size = new System.Drawing.Size(320, 21);
             this.combo_crucero.TabIndex = 5;
@@ -97,7 +97,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 66);
+            this.label4.Location = new System.Drawing.Point(39, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 6;
@@ -106,7 +106,7 @@
             // combo_recorrido_desde
             // 
             this.combo_recorrido_desde.FormattingEnabled = true;
-            this.combo_recorrido_desde.Location = new System.Drawing.Point(126, 57);
+            this.combo_recorrido_desde.Location = new System.Drawing.Point(126, 64);
             this.combo_recorrido_desde.Name = "combo_recorrido_desde";
             this.combo_recorrido_desde.Size = new System.Drawing.Size(147, 21);
             this.combo_recorrido_desde.TabIndex = 7;
@@ -114,14 +114,14 @@
             // combo_recorrido_hasta
             // 
             this.combo_recorrido_hasta.FormattingEnabled = true;
-            this.combo_recorrido_hasta.Location = new System.Drawing.Point(300, 57);
+            this.combo_recorrido_hasta.Location = new System.Drawing.Point(300, 64);
             this.combo_recorrido_hasta.Name = "combo_recorrido_hasta";
             this.combo_recorrido_hasta.Size = new System.Drawing.Size(146, 21);
             this.combo_recorrido_hasta.TabIndex = 8;
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(218, 206);
+            this.btn_guardar.Location = new System.Drawing.Point(218, 213);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(80, 23);
             this.btn_guardar.TabIndex = 9;
@@ -146,6 +146,16 @@
             this.Controls.Add(this.label1);
             this.Name = "AltaViaje";
             this.Text = "Agregar Viaje";
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.fecha_inicio, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.fecha_fin, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.combo_crucero, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.combo_recorrido_desde, 0);
+            this.Controls.SetChildIndex(this.combo_recorrido_hasta, 0);
+            this.Controls.SetChildIndex(this.btn_guardar, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

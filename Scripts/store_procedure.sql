@@ -1,8 +1,7 @@
 use [GD1C2019]
 go
 
-alter PROCEDURE mavema_pie.sp_migracion
-	@vari int
+ALTER PROCEDURE mavema_pie.sp_migracion
 AS
 	BEGIN TRY
 		BEGIN TRANSACTION
@@ -154,4 +153,4 @@ GO
 
 
 
-exec mavema_pie.sp_migracion @vari = 12
+exec mavema_pie.sp_migracion
