@@ -33,6 +33,13 @@ namespace FrbaCrucero.GeneracionViaje
             da.Fill(dt);
             bs.DataSource = dt;
             tabla_viaje.DataSource = bs;
+
+
+            filtro_fecha_salida.CustomFormat = " ";
+            filtro_fecha_salida.Format = DateTimePickerFormat.Custom;
+
+            filtro_fecha_llegada.CustomFormat = " ";
+            filtro_fecha_llegada.Format = DateTimePickerFormat.Custom;
             
             cargarFiltroPuertoOrigen("null");
             cargarFiltroPuertoDestino("null");
@@ -127,10 +134,9 @@ namespace FrbaCrucero.GeneracionViaje
             var puerto_origen = ((KeyValuePair<string, string>)filtro_puerto_salida.SelectedItem).Key;
             var puerto_llegada = ((KeyValuePair<string, string>)filtro_puerto_llegada.SelectedItem).Key;
             var crucero = ((KeyValuePair<string, string>)filtro_crucero.SelectedItem).Key;
-
-            MessageBox.Show(crucero);
-            //BindingSource bs2 = new BindingSource();
-
+            string fecha_salida = filtro_fecha_salida.Text;
+            string fecha_llegada = filtro_fecha_llegada.Text;
+            
             if (puerto_origen == "0") {
                 puerto_origen = "";
             }
@@ -142,7 +148,20 @@ namespace FrbaCrucero.GeneracionViaje
             {
                 crucero = "";
             }
-            bs.Filter = string.Format("origen LIKE '%{0}%' and destino LIKE '%{1}%' and crucero LIKE '%{2}%'", puerto_origen, puerto_llegada, crucero);
+
+            string condicion = "origen LIKE '%{0}%' and destino LIKE '%{1}%' and crucero LIKE '%{2}%'";
+
+            if (!string.IsNullOrWhiteSpace(fecha_salida))
+            {
+                condicion = condicion + "and salida = '" + fecha_salida + "'";
+            }
+
+            if (!string.IsNullOrWhiteSpace(fecha_llegada))
+            {
+                condicion = condicion + "and llegada = '" + fecha_llegada + "'";
+            }
+            
+            bs.Filter = string.Format(condicion, puerto_origen, puerto_llegada, crucero);
             
         }
 
@@ -156,6 +175,18 @@ namespace FrbaCrucero.GeneracionViaje
         private void btn_limpiar_Click(object sender, EventArgs e)
         {
             cargarDatos();
+        }
+
+        private void filtro_fecha_salida_ValueChanged(object sender, EventArgs e)
+        {
+            filtro_fecha_salida.CustomFormat = "yyyy-MM-dd h:m:s";
+            filtro_fecha_salida.Format = DateTimePickerFormat.Custom;
+        }
+
+        private void filtro_fecha_llegada_ValueChanged(object sender, EventArgs e)
+        {
+            filtro_fecha_llegada.CustomFormat = "yyyy-MM-dd h:m:s";
+            filtro_fecha_llegada.Format = DateTimePickerFormat.Custom;
         }
 
     }

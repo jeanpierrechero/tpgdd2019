@@ -124,21 +124,25 @@
             // 
             // filtro_fecha_salida
             // 
-            this.filtro_fecha_salida.CustomFormat = "dd-MM-yyyy h:m:s";
+            this.filtro_fecha_salida.CustomFormat = "yyyy-MM-dd h:m:s";
             this.filtro_fecha_salida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.filtro_fecha_salida.Location = new System.Drawing.Point(524, 35);
             this.filtro_fecha_salida.Name = "filtro_fecha_salida";
             this.filtro_fecha_salida.Size = new System.Drawing.Size(200, 20);
             this.filtro_fecha_salida.TabIndex = 9;
+            this.filtro_fecha_salida.Value = new System.DateTime(2019, 7, 14, 16, 40, 34, 0);
+            this.filtro_fecha_salida.ValueChanged += new System.EventHandler(this.filtro_fecha_salida_ValueChanged);
             // 
             // filtro_fecha_llegada
             // 
-            this.filtro_fecha_llegada.CustomFormat = "dd-MM-yyyy h:m:s";
+            this.filtro_fecha_llegada.CustomFormat = "yyyy-MM-dd h:m:s";
             this.filtro_fecha_llegada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.filtro_fecha_llegada.Location = new System.Drawing.Point(524, 63);
             this.filtro_fecha_llegada.Name = "filtro_fecha_llegada";
             this.filtro_fecha_llegada.Size = new System.Drawing.Size(200, 20);
             this.filtro_fecha_llegada.TabIndex = 10;
+            this.filtro_fecha_llegada.Value = new System.DateTime(2019, 7, 14, 4, 40, 34, 0);
+            this.filtro_fecha_llegada.ValueChanged += new System.EventHandler(this.filtro_fecha_llegada_ValueChanged);
             // 
             // btn_limpiar
             // 
