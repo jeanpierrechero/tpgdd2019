@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button_limpiar = new System.Windows.Forms.Button();
             this.button_aceptar_alta = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button_volver = new System.Windows.Forms.Button();
             this.button_salir = new System.Windows.Forms.Button();
-            this.button_limpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,15 +54,41 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Crucero";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label1
+            // button_limpiar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Modelo";
+            this.button_limpiar.Location = new System.Drawing.Point(6, 129);
+            this.button_limpiar.Name = "button_limpiar";
+            this.button_limpiar.Size = new System.Drawing.Size(75, 23);
+            this.button_limpiar.TabIndex = 3;
+            this.button_limpiar.Text = "Limpiar";
+            this.button_limpiar.UseVisualStyleBackColor = true;
+            // 
+            // button_aceptar_alta
+            // 
+            this.button_aceptar_alta.Location = new System.Drawing.Point(219, 129);
+            this.button_aceptar_alta.Name = "button_aceptar_alta";
+            this.button_aceptar_alta.Size = new System.Drawing.Size(75, 23);
+            this.button_aceptar_alta.TabIndex = 1;
+            this.button_aceptar_alta.Text = "Aceptar";
+            this.button_aceptar_alta.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(69, 69);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(69, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 2;
             // 
             // label2
             // 
@@ -73,30 +99,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Fabricante";
             // 
-            // comboBox1
+            // label1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(69, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(69, 69);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // button_aceptar_alta
-            // 
-            this.button_aceptar_alta.Location = new System.Drawing.Point(219, 129);
-            this.button_aceptar_alta.Name = "button_aceptar_alta";
-            this.button_aceptar_alta.Size = new System.Drawing.Size(75, 23);
-            this.button_aceptar_alta.TabIndex = 1;
-            this.button_aceptar_alta.Text = "Aceptar";
-            this.button_aceptar_alta.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Modelo";
             // 
             // button_volver
             // 
@@ -115,15 +125,6 @@
             this.button_salir.TabIndex = 2;
             this.button_salir.Text = "Salir";
             this.button_salir.UseVisualStyleBackColor = true;
-            // 
-            // button_limpiar
-            // 
-            this.button_limpiar.Location = new System.Drawing.Point(6, 129);
-            this.button_limpiar.Name = "button_limpiar";
-            this.button_limpiar.Size = new System.Drawing.Size(75, 23);
-            this.button_limpiar.TabIndex = 3;
-            this.button_limpiar.Text = "Limpiar";
-            this.button_limpiar.UseVisualStyleBackColor = true;
             // 
             // AltaCrucero
             // 

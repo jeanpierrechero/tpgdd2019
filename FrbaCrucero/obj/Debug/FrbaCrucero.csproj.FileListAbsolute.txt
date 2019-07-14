@@ -119,3 +119,8 @@ C:\Users\giane_\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.Menu.Menu.re
 C:\Users\giane_\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.Usuario.Login.resources
 C:\Users\giane_\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.Properties.Resources.resources
 C:\Users\giane_\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.csproj.GenerateResource.Cache
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.CompraReservaPasaje.Formulario.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.GeneracionViaje.AltaViaje.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.GeneracionViaje.ListadoViaje.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.ListadoEstadistico.Seleccion.resources
+C:\Users\usuario\Desktop\tpgdd2019\FrbaCrucero\obj\Debug\FrbaCrucero.ListadoEstadistico.VistaListado.resources

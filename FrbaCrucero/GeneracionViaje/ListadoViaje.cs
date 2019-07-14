@@ -158,5 +158,10 @@ namespace FrbaCrucero.GeneracionViaje
             cargarDatos();
         }
 
+        private void ListadoViaje_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -146,6 +146,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AltaViaje";
             this.Text = "Agregar Viaje";
+            this.Load += new System.EventHandler(this.AltaViaje_Load);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.fecha_inicio, 0);
             this.Controls.SetChildIndex(this.label2, 0);
