@@ -184,6 +184,7 @@
             this.Controls.Add(this.tabla_viaje);
             this.Name = "ListadoViaje";
             this.Text = "Listado de Viajes";
+            this.Load += new System.EventHandler(this.ListadoViaje_Load);
             this.Controls.SetChildIndex(this.tabla_viaje, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.filtro_crucero, 0);

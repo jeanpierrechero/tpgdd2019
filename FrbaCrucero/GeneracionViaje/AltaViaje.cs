@@ -26,5 +26,10 @@ namespace FrbaCrucero.GeneracionViaje
             listado.Show();
         }
 
+        private void AltaViaje_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

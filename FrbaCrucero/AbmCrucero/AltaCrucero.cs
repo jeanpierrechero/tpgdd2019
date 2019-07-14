@@ -16,5 +16,10 @@ namespace FrbaCrucero.AbmCrucero
         {
             InitializeComponent();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

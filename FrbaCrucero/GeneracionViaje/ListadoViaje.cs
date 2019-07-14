@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -177,6 +177,7 @@ namespace FrbaCrucero.GeneracionViaje
             cargarDatos();
         }
 
+
         private void filtro_fecha_salida_ValueChanged(object sender, EventArgs e)
         {
             filtro_fecha_salida.CustomFormat = "yyyy-MM-dd h:m:s";
@@ -187,6 +188,7 @@ namespace FrbaCrucero.GeneracionViaje
         {
             filtro_fecha_llegada.CustomFormat = "yyyy-MM-dd h:m:s";
             filtro_fecha_llegada.Format = DateTimePickerFormat.Custom;
+
         }
 
     }
