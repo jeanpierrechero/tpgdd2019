@@ -14,19 +14,26 @@ namespace FrbaCrucero.AbmRol
     public partial class FormularioRol : Form
     {
         SqlConnection c = new SqlConnection(FrbaCrucero.Properties.Settings.Default.GD1C2019ConnectionString);
-        public FormularioRol(int codigo,String unNombre,List<String> funcionalidades)
+        public FormularioRol(String codigo,String unNombre)
         {
             InitializeComponent();
             nombre_box.Text = unNombre;
-            for (int i = 0; i < funcionalidades.Count(); i++)
+            c.Open();
+            SqlCommand comando = new SqlCommand("select f.func_nombre from mavema_pie.role r join mavema_pie.role_funcionalidad rf on r.role_codigo = rf.role_codigo join mavema_pie.funcionalidad f on f.func_codigo = rf.func_codigo where r.role_codigo ="+codigo_rol +"group by f.func_nombre  ", c);
+            
+
+
+            for (int i = 0; i < comando.Parameters.Count; i++)
             {
-                comboBox_funcionalidades.Items[0] = funcionalidades[0];
+                comboBox_funcionalidades.Items[i] = comando.Parameters[i].Value.ToString();
 
             }
+            c.Close();
         }
 
         public int indice;
-        public int codigo_rol;
+        public String codigo_rol;
+        
         
        
      
@@ -64,11 +71,11 @@ namespace FrbaCrucero.AbmRol
         private void boton_guardar_Click(object sender, EventArgs e)
         {
             c.Open();
-            SqlCommand comando = new SqlCommand("dar_de_alta_role", c);
+            SqlCommand comando = new SqlCommand("vaciarFuncionalidades", c);
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@nombre_rol", nombre_box.Text);
-            codigo_rol = Convert.ToInt32(comando.Parameters["@rol_codigo"].Value);
+            comando.Parameters.AddWithValue("@role", codigo_rol);
             c.Close();
+
             c.Open();
 
             for (int i = 0; i < comboBoxSeleccionados.Items.Count; i++)

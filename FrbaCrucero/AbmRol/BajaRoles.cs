@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace FrbaCrucero.AbmRol
 {
     public partial class BajaRoles : Form
     {
+        public int codigo_rol;
+        SqlConnection c = new SqlConnection(FrbaCrucero.Properties.Settings.Default.GD1C2019ConnectionString);
         public BajaRoles()
         {
             InitializeComponent();
@@ -35,6 +38,13 @@ namespace FrbaCrucero.AbmRol
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            c.Open();
+            SqlCommand comando = new SqlCommand("dar_de_baja_role", c);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@nombre_rol", textBox_nombre.Text);
+            codigo_rol = Convert.ToInt32(comando.Parameters["@rol_codigo"].Value);
+            c.Close();
 
         }
 

@@ -33,5 +33,31 @@ namespace FrbaCrucero.Menu
             listRol.Show();
         }
 
+        private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var listadoViajes = new GeneracionViaje.ListadoViaje();
+            listadoViajes.Show();
+        }
+
+        private void agregarViajeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var altaViaje = new GeneracionViaje.AltaViaje();
+            altaViaje.Show();
+        }
+
+        private void estadisticaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listadoEstadísticoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var listadoEstadistico = new ListadoEstadistico.Seleccion();
+            listadoEstadistico.Show();
+        }
+
     }
 }

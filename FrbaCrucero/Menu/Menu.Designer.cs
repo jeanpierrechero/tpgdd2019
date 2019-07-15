@@ -39,7 +39,6 @@
             this.listarFuncionalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarFuncionalidadToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoEstadisticoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recorridosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +51,11 @@
             this.comprarPasajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservarPasajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelarPasajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viajesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarViajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadisticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoEstadísticoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +71,9 @@
             this.puertosToolStripMenuItem,
             this.recorridosToolStripMenuItem,
             this.crucerosToolStripMenuItem,
-            this.pasajesToolStripMenuItem});
+            this.pasajesToolStripMenuItem,
+            this.viajesToolStripMenuItem,
+            this.estadisticaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(720, 24);
@@ -79,8 +85,7 @@
             this.rolesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarRolToolStripMenuItem,
             this.listarToolStripMenuItem,
-            this.listadoEstadisticoToolStripMenuItem,
-            this.viajeToolStripMenuItem});
+            this.listadoEstadisticoToolStripMenuItem});
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
             this.rolesToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.rolesToolStripMenuItem.Text = "Administración";
@@ -97,14 +102,14 @@
             // listadoRolesToolStripMenuItem
             // 
             this.listadoRolesToolStripMenuItem.Name = "listadoRolesToolStripMenuItem";
-            this.listadoRolesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listadoRolesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.listadoRolesToolStripMenuItem.Text = "Listado Roles";
             this.listadoRolesToolStripMenuItem.Click += new System.EventHandler(this.listarRoles);
             // 
             // agregarRolToolStripMenuItem1
             // 
             this.agregarRolToolStripMenuItem1.Name = "agregarRolToolStripMenuItem1";
-            this.agregarRolToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.agregarRolToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
             this.agregarRolToolStripMenuItem1.Text = "Agregar Rol";
             this.agregarRolToolStripMenuItem1.Click += new System.EventHandler(this.btnAgregarRol);
             // 
@@ -134,12 +139,6 @@
             this.listadoEstadisticoToolStripMenuItem.Name = "listadoEstadisticoToolStripMenuItem";
             this.listadoEstadisticoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.listadoEstadisticoToolStripMenuItem.Text = "Listado Estadística";
-            // 
-            // viajeToolStripMenuItem
-            // 
-            this.viajeToolStripMenuItem.Name = "viajeToolStripMenuItem";
-            this.viajeToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.viajeToolStripMenuItem.Text = "Viaje";
             // 
             // puertosToolStripMenuItem
             // 
@@ -225,6 +224,45 @@
             this.cancelarPasajeToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.cancelarPasajeToolStripMenuItem.Text = "Cancelar Pasaje";
             // 
+            // viajesToolStripMenuItem
+            // 
+            this.viajesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listadoToolStripMenuItem,
+            this.agregarViajeToolStripMenuItem});
+            this.viajesToolStripMenuItem.Name = "viajesToolStripMenuItem";
+            this.viajesToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.viajesToolStripMenuItem.Text = "Viajes";
+            // 
+            // listadoToolStripMenuItem
+            // 
+            this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.listadoToolStripMenuItem.Text = "Listado Viajes";
+            this.listadoToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
+            // 
+            // agregarViajeToolStripMenuItem
+            // 
+            this.agregarViajeToolStripMenuItem.Name = "agregarViajeToolStripMenuItem";
+            this.agregarViajeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.agregarViajeToolStripMenuItem.Text = "Agregar Viaje";
+            this.agregarViajeToolStripMenuItem.Click += new System.EventHandler(this.agregarViajeToolStripMenuItem_Click);
+            // 
+            // estadisticaToolStripMenuItem
+            // 
+            this.estadisticaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listadoEstadísticoToolStripMenuItem});
+            this.estadisticaToolStripMenuItem.Name = "estadisticaToolStripMenuItem";
+            this.estadisticaToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.estadisticaToolStripMenuItem.Text = "Estadística";
+            this.estadisticaToolStripMenuItem.Click += new System.EventHandler(this.estadisticaToolStripMenuItem_Click);
+            // 
+            // listadoEstadísticoToolStripMenuItem
+            // 
+            this.listadoEstadísticoToolStripMenuItem.Name = "listadoEstadísticoToolStripMenuItem";
+            this.listadoEstadísticoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.listadoEstadísticoToolStripMenuItem.Text = "Listado Estadístico";
+            this.listadoEstadísticoToolStripMenuItem.Click += new System.EventHandler(this.listadoEstadísticoToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +303,10 @@
         private System.Windows.Forms.ToolStripMenuItem listarFuncionalidadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarFuncionalidadToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listadoEstadisticoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viajeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viajesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarViajeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadisticaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoEstadísticoToolStripMenuItem;
     }
 }

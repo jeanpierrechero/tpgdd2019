@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="listaModelosComboBox" targetNamespace="http://tempuri.org/listaModelosComboBox.xsd" xmlns:mstns="http://tempuri.org/listaModelosComboBox.xsd" xmlns="http://tempuri.org/listaModelosComboBox.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GD1C2019ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GD1C2019ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FrbaCrucero.Properties.Settings.GlobalReference.Default.GD1C2019ConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="listaModeloTableAdapter" GeneratorDataComponentClassName="listaModeloTableAdapter" Name="listaModelo" UserDataComponentName="listaModeloTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GD1C2019ConnectionString1 (Settings)" DbObjectName="GD1C2019.dbo.listaModelo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT cruc_modelo FROM dbo.listaModelo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cruc_modelo" DataSetColumn="cruc_modelo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="listaModelosComboBox" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="listaModelosComboBox" msprop:Generator_UserDSName="listaModelosComboBox">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="listaModelo" msprop:Generator_TableClassName="listaModeloDataTable" msprop:Generator_TableVarName="tablelistaModelo" msprop:Generator_TablePropName="listaModelo" msprop:Generator_RowDeletingName="listaModeloRowDeleting" msprop:Generator_RowChangingName="listaModeloRowChanging" msprop:Generator_RowEvHandlerName="listaModeloRowChangeEventHandler" msprop:Generator_RowDeletedName="listaModeloRowDeleted" msprop:Generator_UserTableName="listaModelo" msprop:Generator_RowChangedName="listaModeloRowChanged" msprop:Generator_RowEvArgName="listaModeloRowChangeEvent" msprop:Generator_RowClassName="listaModeloRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cruc_modelo" msprop:Generator_ColumnVarNameInTable="columncruc_modelo" msprop:Generator_ColumnPropNameInRow="cruc_modelo" msprop:Generator_ColumnPropNameInTable="cruc_modeloColumn" msprop:Generator_UserColumnName="cruc_modelo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -36,7 +36,6 @@
             this.button_entrar_modificacion_cruceros = new System.Windows.Forms.Button();
             this.button_entrar_alta_crucero = new System.Windows.Forms.Button();
             this.button_salir = new System.Windows.Forms.Button();
-            this.button_volver = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,22 +119,13 @@
             this.button_salir.TabIndex = 1;
             this.button_salir.Text = "Salir";
             this.button_salir.UseVisualStyleBackColor = true;
-            // 
-            // button_volver
-            // 
-            this.button_volver.Location = new System.Drawing.Point(12, 226);
-            this.button_volver.Name = "button_volver";
-            this.button_volver.Size = new System.Drawing.Size(75, 23);
-            this.button_volver.TabIndex = 2;
-            this.button_volver.Text = "Volver";
-            this.button_volver.UseVisualStyleBackColor = true;
+            this.button_salir.Click += new System.EventHandler(this.button_salir_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 261);
-            this.Controls.Add(this.button_volver);
             this.Controls.Add(this.button_salir);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -156,6 +146,5 @@
         private System.Windows.Forms.Button button_entrar_modificacion_cruceros;
         private System.Windows.Forms.Button button_entrar_alta_crucero;
         private System.Windows.Forms.Button button_salir;
-        private System.Windows.Forms.Button button_volver;
     }
 }

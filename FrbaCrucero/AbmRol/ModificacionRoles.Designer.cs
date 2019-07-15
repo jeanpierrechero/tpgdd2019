@@ -30,43 +30,45 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_buscar = new System.Windows.Forms.Button();
             this.checkBox_solo_no_activos = new System.Windows.Forms.CheckBox();
             this.checkBox_solo_activos = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listaRolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gD1C2019DataSet3 = new FrbaCrucero.GD1C2019DataSet3();
             this.listaRolesTableAdapter = new FrbaCrucero.GD1C2019DataSet3TableAdapters.listaRolesTableAdapter();
             this.button_salir = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gD1C2019DataSet1 = new FrbaCrucero.GD1C2019DataSet1();
-            this.gD1C2019DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gD1C2019DataSet12 = new FrbaCrucero.GD1C2019DataSet12();
-            this.gD1C2019DataSet11 = new FrbaCrucero.GD1C2019DataSet11();
-            this.listaRolesTotal = new FrbaCrucero.listaRolesTotal();
-            this.listaRolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.listaRolesTableAdapter1 = new FrbaCrucero.listaRolesTotalTableAdapters.listaRolesTableAdapter();
             this.nOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fUNCIONALIDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eSTADODataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Seleccion = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.listaRolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.listaRolesTotal = new FrbaCrucero.listaRolesTotal();
+            this.gD1C2019DataSet1 = new FrbaCrucero.GD1C2019DataSet1();
+            this.gD1C2019DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gD1C2019DataSet12 = new FrbaCrucero.GD1C2019DataSet12();
+            this.gD1C2019DataSet11 = new FrbaCrucero.GD1C2019DataSet11();
+            this.listaRolesTableAdapter1 = new FrbaCrucero.listaRolesTotalTableAdapters.listaRolesTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaRolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaRolesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaRolesTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaRolesTotal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaRolesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_buscar);
             this.groupBox1.Controls.Add(this.checkBox_solo_no_activos);
             this.groupBox1.Controls.Add(this.checkBox_solo_activos);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox_nombre);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -74,6 +76,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar Por";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button_buscar
+            // 
+            this.button_buscar.Location = new System.Drawing.Point(183, 24);
+            this.button_buscar.Name = "button_buscar";
+            this.button_buscar.Size = new System.Drawing.Size(75, 23);
+            this.button_buscar.TabIndex = 5;
+            this.button_buscar.Text = "Buscar";
+            this.button_buscar.UseVisualStyleBackColor = true;
+            this.button_buscar.Click += new System.EventHandler(this.button_buscar_Click);
             // 
             // checkBox_solo_no_activos
             // 
@@ -84,23 +97,25 @@
             this.checkBox_solo_no_activos.TabIndex = 4;
             this.checkBox_solo_no_activos.Text = "No activos";
             this.checkBox_solo_no_activos.UseVisualStyleBackColor = true;
+            this.checkBox_solo_no_activos.CheckedChanged += new System.EventHandler(this.checkBox_solo_no_activos_CheckedChanged);
             // 
             // checkBox_solo_activos
             // 
             this.checkBox_solo_activos.AutoSize = true;
-            this.checkBox_solo_activos.Location = new System.Drawing.Point(241, 28);
+            this.checkBox_solo_activos.Location = new System.Drawing.Point(276, 28);
             this.checkBox_solo_activos.Name = "checkBox_solo_activos";
             this.checkBox_solo_activos.Size = new System.Drawing.Size(61, 17);
             this.checkBox_solo_activos.TabIndex = 3;
             this.checkBox_solo_activos.Text = "Activos";
             this.checkBox_solo_activos.UseVisualStyleBackColor = true;
+            this.checkBox_solo_activos.CheckedChanged += new System.EventHandler(this.checkBox_solo_activos_CheckedChanged);
             // 
-            // textBox1
+            // textBox_nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(56, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBox_nombre.Location = new System.Drawing.Point(56, 26);
+            this.textBox_nombre.Name = "textBox_nombre";
+            this.textBox_nombre.Size = new System.Drawing.Size(100, 20);
+            this.textBox_nombre.TabIndex = 1;
             // 
             // label1
             // 
@@ -150,40 +165,6 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // gD1C2019DataSet1
-            // 
-            this.gD1C2019DataSet1.DataSetName = "GD1C2019DataSet1";
-            this.gD1C2019DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gD1C2019DataSet1BindingSource
-            // 
-            this.gD1C2019DataSet1BindingSource.DataSource = this.gD1C2019DataSet1;
-            this.gD1C2019DataSet1BindingSource.Position = 0;
-            // 
-            // gD1C2019DataSet12
-            // 
-            this.gD1C2019DataSet12.DataSetName = "GD1C2019DataSet12";
-            this.gD1C2019DataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gD1C2019DataSet11
-            // 
-            this.gD1C2019DataSet11.DataSetName = "GD1C2019DataSet11";
-            this.gD1C2019DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // listaRolesTotal
-            // 
-            this.listaRolesTotal.DataSetName = "listaRolesTotal";
-            this.listaRolesTotal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // listaRolesBindingSource1
-            // 
-            this.listaRolesBindingSource1.DataMember = "listaRoles";
-            this.listaRolesBindingSource1.DataSource = this.listaRolesTotal;
-            // 
-            // listaRolesTableAdapter1
-            // 
-            this.listaRolesTableAdapter1.ClearBeforeFill = true;
-            // 
             // nOMBREDataGridViewTextBoxColumn
             // 
             this.nOMBREDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -211,6 +192,40 @@
             this.Seleccion.Name = "Seleccion";
             this.Seleccion.Text = "Modificar";
             // 
+            // listaRolesBindingSource1
+            // 
+            this.listaRolesBindingSource1.DataMember = "listaRoles";
+            this.listaRolesBindingSource1.DataSource = this.listaRolesTotal;
+            // 
+            // listaRolesTotal
+            // 
+            this.listaRolesTotal.DataSetName = "listaRolesTotal";
+            this.listaRolesTotal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gD1C2019DataSet1
+            // 
+            this.gD1C2019DataSet1.DataSetName = "GD1C2019DataSet1";
+            this.gD1C2019DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gD1C2019DataSet1BindingSource
+            // 
+            this.gD1C2019DataSet1BindingSource.DataSource = this.gD1C2019DataSet1;
+            this.gD1C2019DataSet1BindingSource.Position = 0;
+            // 
+            // gD1C2019DataSet12
+            // 
+            this.gD1C2019DataSet12.DataSetName = "GD1C2019DataSet12";
+            this.gD1C2019DataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gD1C2019DataSet11
+            // 
+            this.gD1C2019DataSet11.DataSetName = "GD1C2019DataSet11";
+            this.gD1C2019DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // listaRolesTableAdapter1
+            // 
+            this.listaRolesTableAdapter1.ClearBeforeFill = true;
+            // 
             // ModificacionRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,12 +242,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaRolesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaRolesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaRolesTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaRolesTotal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaRolesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,7 +261,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox_solo_no_activos;
         private System.Windows.Forms.CheckBox checkBox_solo_activos;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_nombre;
         private System.Windows.Forms.Button button_salir;
         private System.Windows.Forms.DataGridView dataGridView1;
         private GD1C2019DataSet1 gD1C2019DataSet1;
@@ -260,5 +275,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fUNCIONALIDADDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn eSTADODataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Seleccion;
+        private System.Windows.Forms.Button button_buscar;
     }
 }

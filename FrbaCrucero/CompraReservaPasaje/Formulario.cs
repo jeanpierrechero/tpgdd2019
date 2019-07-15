@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrbaCrucero.GeneracionViaje
+namespace FrbaCrucero.CompraReservaPasaje
 {
-    public partial class Form1 : Form
+    public partial class Formulario : Form
     {
-        public Form1()
+        public Formulario()
         {
             InitializeComponent();
+        }
+
+        private void combo_origen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
