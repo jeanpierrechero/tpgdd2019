@@ -31,5 +31,15 @@ namespace FrbaCrucero.AbmCrucero
         {
             new BajaCrucero().Show();
         }
+
+        private void button_volver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void button_salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

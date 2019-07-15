@@ -51,17 +51,41 @@
     <Compile Include="AbmCrucero\AltaCrucero.Designer.cs">
       <DependentUpon>AltaCrucero.cs</DependentUpon>
     </Compile>
+    <Compile Include="AbmCrucero\baja temporal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmCrucero\baja temporal.Designer.cs">
+      <DependentUpon>baja temporal.cs</DependentUpon>
+    </Compile>
     <Compile Include="AbmCrucero\BajaCrucero.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AbmCrucero\BajaCrucero.Designer.cs">
       <DependentUpon>BajaCrucero.cs</DependentUpon>
     </Compile>
+    <Compile Include="AbmCrucero\ConfirmacionCancelacionPasajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmCrucero\ConfirmacionCancelacionPasajes.Designer.cs">
+      <DependentUpon>ConfirmacionCancelacionPasajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="AbmCrucero\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AbmCrucero\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmCrucero\FormularioCrucero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmCrucero\FormularioCrucero.Designer.cs">
+      <DependentUpon>FormularioCrucero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmCrucero\ModificarCruceros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmCrucero\ModificarCruceros.Designer.cs">
+      <DependentUpon>ModificarCruceros.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmPuerto\AltaPuerto.cs">
       <SubType>Form</SubType>
@@ -232,6 +256,11 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="listaCrucerosDisponibles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>listaCrucerosDisponibles.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ListadoEstadistico\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +278,16 @@
     </Compile>
     <Compile Include="ListadoEstadistico\VistaListado.Designer.cs">
       <DependentUpon>VistaListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listaFabricantesParaCombobox.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>listaFabricantesParaCombobox.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="listaModelosComboBox.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>listaModelosComboBox.xsd</DependentUpon>
     </Compile>
     <Compile Include="listaRolesActivos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -277,11 +316,23 @@
     <EmbeddedResource Include="AbmCrucero\AltaCrucero.resx">
       <DependentUpon>AltaCrucero.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AbmCrucero\baja temporal.resx">
+      <DependentUpon>baja temporal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AbmCrucero\BajaCrucero.resx">
       <DependentUpon>BajaCrucero.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AbmCrucero\ConfirmacionCancelacionPasajes.resx">
+      <DependentUpon>ConfirmacionCancelacionPasajes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AbmCrucero\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmCrucero\FormularioCrucero.resx">
+      <DependentUpon>FormularioCrucero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmCrucero\ModificarCruceros.resx">
+      <DependentUpon>ModificarCruceros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmPuerto\AltaPuerto.resx">
       <DependentUpon>AltaPuerto.cs</DependentUpon>
@@ -501,6 +552,39 @@
     </None>
     <None Include="GD1C2019DataSet9.xss">
       <DependentUpon>GD1C2019DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="listaCrucerosDisponibles.xsc">
+      <DependentUpon>listaCrucerosDisponibles.xsd</DependentUpon>
+    </None>
+    <None Include="listaCrucerosDisponibles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>listaCrucerosDisponibles.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="listaCrucerosDisponibles.xss">
+      <DependentUpon>listaCrucerosDisponibles.xsd</DependentUpon>
+    </None>
+    <None Include="listaFabricantesParaCombobox.xsc">
+      <DependentUpon>listaFabricantesParaCombobox.xsd</DependentUpon>
+    </None>
+    <None Include="listaFabricantesParaCombobox.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>listaFabricantesParaCombobox.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="listaFabricantesParaCombobox.xss">
+      <DependentUpon>listaFabricantesParaCombobox.xsd</DependentUpon>
+    </None>
+    <None Include="listaModelosComboBox.xsc">
+      <DependentUpon>listaModelosComboBox.xsd</DependentUpon>
+    </None>
+    <None Include="listaModelosComboBox.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>listaModelosComboBox.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="listaModelosComboBox.xss">
+      <DependentUpon>listaModelosComboBox.xsd</DependentUpon>
     </None>
     <None Include="listaRolesActivos.xsc">
       <DependentUpon>listaRolesActivos.xsd</DependentUpon>

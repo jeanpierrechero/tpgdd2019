@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_buscar = new System.Windows.Forms.Button();
             this.checkBox_solo_no_activos = new System.Windows.Forms.CheckBox();
             this.checkBox_solo_activos = new System.Windows.Forms.CheckBox();
             this.textBox_nombre = new System.Windows.Forms.TextBox();
@@ -50,7 +51,10 @@
             this.gD1C2019DataSet12 = new FrbaCrucero.GD1C2019DataSet12();
             this.gD1C2019DataSet11 = new FrbaCrucero.GD1C2019DataSet11();
             this.listaRolesTableAdapter1 = new FrbaCrucero.listaRolesTotalTableAdapters.listaRolesTableAdapter();
+<<<<<<< HEAD
+=======
             this.button_buscar = new System.Windows.Forms.Button();
+>>>>>>> 60addb3bbf9a4e003ff4d8c70eb9cafe46309dc3
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaRolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD1C2019DataSet3)).BeginInit();
@@ -76,6 +80,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar Por";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button_buscar
+            // 
+            this.button_buscar.Location = new System.Drawing.Point(183, 24);
+            this.button_buscar.Name = "button_buscar";
+            this.button_buscar.Size = new System.Drawing.Size(75, 23);
+            this.button_buscar.TabIndex = 5;
+            this.button_buscar.Text = "Buscar";
+            this.button_buscar.UseVisualStyleBackColor = true;
+            this.button_buscar.Click += new System.EventHandler(this.button_buscar_Click);
             // 
             // checkBox_solo_no_activos
             // 
@@ -215,6 +230,8 @@
             // 
             this.listaRolesTableAdapter1.ClearBeforeFill = true;
             // 
+<<<<<<< HEAD
+=======
             // button_buscar
             // 
             this.button_buscar.Location = new System.Drawing.Point(183, 24);
@@ -225,6 +242,7 @@
             this.button_buscar.UseVisualStyleBackColor = true;
             this.button_buscar.Click += new System.EventHandler(this.button_buscar_Click);
             // 
+>>>>>>> 60addb3bbf9a4e003ff4d8c70eb9cafe46309dc3
             // ModificacionRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

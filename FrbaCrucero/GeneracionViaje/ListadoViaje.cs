@@ -177,6 +177,10 @@ namespace FrbaCrucero.GeneracionViaje
             cargarDatos();
         }
 
+<<<<<<< HEAD
+        private void ListadoViaje_Load(object sender, EventArgs e)
+        {
+=======
 
         private void filtro_fecha_salida_ValueChanged(object sender, EventArgs e)
         {
@@ -188,6 +192,7 @@ namespace FrbaCrucero.GeneracionViaje
         {
             filtro_fecha_llegada.CustomFormat = "yyyy-MM-dd h:m:s";
             filtro_fecha_llegada.Format = DateTimePickerFormat.Custom;
+>>>>>>> 60addb3bbf9a4e003ff4d8c70eb9cafe46309dc3
 
         }
 
